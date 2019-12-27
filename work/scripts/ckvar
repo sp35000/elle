@@ -1,0 +1,20 @@
+# variaveis de ambiente
+
+datetime=`date +%y%m%d%h%m%s`
+home=/home/12805865839
+
+data=$home/d/data
+fixed=$home/d/fixed
+mirror=$home/d/mirror
+recorded=$home/d/recorded
+
+scripts=$fixed/work/cl
+lincfg=$recorded/work/cfg/linux
+wincfg=$recorded/work/cfg/windows
+
+pendrive=/media/KINGSTON
+to_home=$pendrive/to_home
+to_work=$pendrive/to_work
+
+gears=$home/.mozilla/firefox/xxutj8a2.default
+#wingears=$home/c/data/cw/firefoxportable/data/profile

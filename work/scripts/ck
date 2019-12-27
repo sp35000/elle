@@ -1,0 +1,29 @@
+#!/bin/sh
+DATETIME=`date +%Y%m%d%H%M%S`
+HOME=/home/12805865839
+DATA=$HOME/d/data
+FIXED=$HOME/d/fixed
+RECORDED=$HOME/d/recorded
+MIRROR=$HOME/d/mirror
+SCRIPTS=/home/12805865839/work/cl
+# PENDRIVE=/media/PEN03
+PENDRIVE=/media/SAMSUNG
+TO_HOME=$PENDRIVE/to_home
+TO_WORK=$PENDRIVE/to_work
+cat <<EOF
+-------------------------------------------------------
+CKADM - Selecione uma operacao:
+1. backup da configuracao
+2. backup do Expresso
+3. cp_sig_to_work
+4. cp_data_to_home
+--------------------------------------------------------
+EOF
+read -p ": " OPERACAO
+echo $OPERACAO
+case "$OPERACAO" in
+ 1) $SCRIPTS/cfgbackup;;
+ 2) $SCRIPTS/mailbackup;;
+ 3) $SCRIPTS/cp_sig_to_work;;
+ 4) $SCRIPTS/cp_data_to_home;;
+esac

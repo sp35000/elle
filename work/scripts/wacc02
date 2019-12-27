@@ -1,0 +1,2 @@
+#!/bin/sh
+grep $1 /home/12805865839/d/fixed/work/wacc02.txt

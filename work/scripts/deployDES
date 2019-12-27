@@ -1,0 +1,9 @@
+#!/bin/sh
+case $1 in
+pagtowebrest) 
+ date
+ echo publicando pagtowebrest no AmbDes - dominio Desenvolvimento
+# scp -i /home/12805865839/.ssh/nuvem.pem -r /home/12805865839/fwork/cj/wildfly-10.1.0.Final/standalone/deployments/pagtowebrest.war 5618295c99ccce96c6000543@pagtowebws6-des34475.apps.dev.serpro:/var/lib/openshift/5618295c99ccce96c6000543/jbosseap64/standalone/deployments ;;
+ scp -i /home/12805865839/.ssh/nuvem.pem -r /home/12805865839/fwork/publicacao/DES/pagtowebrest-AmbDes/desenvolvimento/pagtowebrest.war 5618295c99ccce96c6000543@pagtowebws6-des34475.apps.dev.serpro:/var/lib/openshift/5618295c99ccce96c6000543/jbosseap64/standalone/deployments ;;
+*) echo app invalido;;
+esac

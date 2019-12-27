@@ -1,0 +1,8 @@
+echo WSDL GERADO
+echo ---------------------------------
+sudo cp /home/12805865839/workspace/pagtoweb-ws/src/main/webapp/wsdl/WebServicePagtoweb.wsdl /home/12805865839/c/workspace/34475pagtoweb/01-Sistema/05-Implementacao/01-Aplicacao/dotnet/WebServicePagtowebManual.wsdl
+ls -l /home/12805865839/workspace/pagtoweb-ws/src/main/webapp/wsdl/
+echo ---------------------------------
+echo WSDL COPIADO
+echo ---------------------------------
+ls -l /home/12805865839/c/workspace/34475pagtoweb/01-Sistema/05-Implementacao/01-Aplicacao/dotnet/WebServicePagtowebManual.wsdl

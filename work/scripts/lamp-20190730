@@ -1,0 +1,6 @@
+#!/bin/sh
+sudo apt-get install dmsetup && dmsetup mknodes
+#sudo curl -sSL https://get.docker.com/ | sh
+#sudo usermod -aG docker example_user
+docker search linode
+docker pull linode/lamp

@@ -1,0 +1,5 @@
+#!/bin/sh
+case $1 in
+06|07|08|09|10|11|12|13|14|15|16|17|18) vi /home/12805865839/ownCloud/to_cloud/sig/trance/w$1.txt;;
+*) vi /home/12805865839/fwork/w19.txt;;
+esac

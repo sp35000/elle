@@ -1,0 +1,8 @@
+#!/bin/sh -x
+cd ~/bin
+HOME=~/ownCloud/to_cloud/sig/trance
+OPTIONS='trance.cfg'
+case $1 in
+06|07|08|09|10|11|12|13|14|15|16|17) txt2html @$HOME/$OPTIONS --infile $HOME/h$1.txt --outfile $HOME/h$1.html;;
+*) txt2html @$HOME/$OPTIONS --infile $HOME/h18.txt --outfile $HOME/h18.html;;
+esac

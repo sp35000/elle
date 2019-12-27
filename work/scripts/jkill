@@ -1,0 +1,1 @@
+kill -9 `ps aux|grep jboss|grep -v grep|cut -d' ' -f2`

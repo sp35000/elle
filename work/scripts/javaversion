@@ -1,0 +1,4 @@
+#!/bin/sh
+sudo rm /etc/alternatives/java
+sudo ln -s /home/12805865839/fwork/cj/$1/bin/java /etc/alternatives/java
+java -version

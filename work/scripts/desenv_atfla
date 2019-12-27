@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo mount -t cifs //10.200.103.8/desenv_atfla /home/12805865839/y -o user=12805865839

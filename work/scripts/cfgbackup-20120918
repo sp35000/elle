@@ -1,0 +1,37 @@
+#!/bin/sh
+#
+# variaveis de ambiente
+HOME=/home/12805865839
+DATA=$HOME/d/data
+FIXED=$HOME/d/fixed
+RECORDED=$HOME/d/recorded
+MIRROR=$HOME/d/mirror
+SCRIPTS=$FIXED/work/cl
+WINCFG=$RECORDED/work/cfg/windows
+LINCFG=$RECORDED/work/cfg/linux
+#
+# execucao
+echo --------------------------------------------
+echo                 EXECUCAO
+echo --------------------------------------------
+echo configuration backup...
+cp /etc/hosts $LINCFG
+cp /etc/stunnel/stunnel.conf $LINCFG
+#cp /usr/lib/oracle/10.2.0.4/client/network/admin/tnsnames.ora $LINCFG
+#cp $HOME/c/WINDOWS/system32/drivers/etc/hosts $WINCFG
+#cp $HOME/c/Arquivos\ de\ programas/stunnel/stunnel.conf $WINCFG 
+#cp $HOME/c/DevSuiteHome_1/NETWORK/ADMIN/tnsnames.ora $WINCFG
+#
+# controle
+echo --------------------------------------------
+echo           RELATORIO DE CONTROLE
+echo --------------------------------------------
+echo HOME: $HOME
+echo SCRIPTS: $SCRIPTS
+echo --------------------------------------------
+echo WINCFG: $WINCFG
+ls -l $WINCFG
+echo --------------------------------------------
+echo LINCFG: $LINCFG
+ls -l $LINCFG
+echo --------------------------------------------

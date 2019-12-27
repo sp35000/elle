@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+echo --------------------------------------------
+DATETIME=`date +%Y%m%d%H%M%S`
+HOME=/home/12805865839
+DATA=$HOME/d/data
+FIXED=$HOME/d/fixed
+RECORDED=$HOME/d/recorded
+MIRROR=$HOME/d/mirror
+SCRIPTS=$FIXED/work/cl
+PENDRIVE=/media/PEN03
+TO_HOME=$PENDRIVE/to_home
+TO_WORK=$PENDRIVE/to_work
+echo backup da configuracao
+$SCRIPTS/cfgbackup
+echo backup do Expresso...
+$SCRIPTS/mailbackup
+echo renomeado "Google Gears for Firefox" para GoogleGearsForFirefox-$DATETIME
+mv $DATA/work/Google\ Gears\ for\ Firefox/ $DATA/work/GoogleGearsForFirefox-$DATETIME
+echo atualizando sig
+cp -a $TO_WORK/sig $MIRROR/sig
+echo copiando para pendrive
+cp -a $DATA/my $TO_HOME
+cp -a $DATA/work $TO_HOME
+cp -a $FIXED/* $TO_HOME
+echo copiando data para recorded
+cp -a $DATA/* $RECORDED/
+echo --------------------------------------------

@@ -1,0 +1,2 @@
+#!/bin/sh
+sudo docker run -p 81:8080 swaggerapi/swagger-editor

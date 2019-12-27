@@ -1,0 +1,4 @@
+#!/bin/sh
+HOME=/home/12805865839
+cp $HOME/work/work.html $HOME/d/data/sig/emma/
+cp $HOME/work/oilz.html $HOME/d/data/sig/emma/

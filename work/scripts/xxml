@@ -1,0 +1,17 @@
+#!/bin/sh
+file=$1
+section=$2
+flag=0
+start="<$section>"
+end="</$section>"
+echo --------------------------------------------------------------------------------
+echo "Reading between $start and $end in $file"
+echo --------------------------------------------------------------------------------
+for line in `cat $file`
+do
+start_founded=`echo $line|grep $start|wc -l`
+stop_founded=`echo $line|grep $end|wc -l`
+[ $start_founded -eq 1 ] && flag=1
+[ $flag -eq 1 ] && echo "$line"
+[ $stop_founded -eq 1 ] && flag=0
+done

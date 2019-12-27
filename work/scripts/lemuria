@@ -1,0 +1,2 @@
+#!/bin/bash
+ssh -C2qTnN -D 12345 ubuntu@lemuria

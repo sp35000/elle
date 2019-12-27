@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+# variaveis de ambiente
+HOME=/home/12805865839
+DATA=$HOME/d/data
+FIXED=$HOME/d/fixed
+RECORDED=$HOME/d/recorded
+MIRROR=$HOME/d/mirror
+SCRIPTS=$FIXED/work/cl
+GEARS=$HOME/.mozilla/firefox/xxutj8a2.default
+#WINGEARS=$HOME/c/data/cw/FirefoxPortable/Data/profile
+#
+# execucao
+echo --------------------------------------------
+echo                 EXECUCAO
+echo --------------------------------------------
+echo mail backup...
+rm -Rf $DATA/work/Google\ Gears\ for\ Firefox/
+cp -a $GEARS/Google\ Gears\ for\ Firefox $DATA/work/
+#sudo rm -Rf $WINGEARS/Google\ Gears\ for\ Firefox/
+#sudo cp -a $GEARS/Google\ Gears\ for\ Firefox $WINGEARS
+#
+# controle
+echo --------------------------------------------
+echo           RELATORIO DE CONTROLE
+echo --------------------------------------------
+du -hs $GEARS/Google\ Gears\ for\ Firefox/
+du -hs $DATA/work/Google\ Gears\ for\ Firefox/
+#du -hs $WINGEARS/Google\ Gears\ for\ Firefox/
+echo --------------------------------------------

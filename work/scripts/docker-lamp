@@ -1,0 +1,10 @@
+#!/bin/sh
+BASE_DIR=/home/12805865839/fwork/study/it/lab/docker
+cd $BASE_DIR
+docker stop docker_web_1
+docker stop docker_db_1
+docker-compose rm web
+docker-compose rm db
+docker-compose up -d --remove-orphans
+docker ps
+docker volume ls

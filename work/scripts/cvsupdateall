@@ -1,0 +1,10 @@
+#!/bin/sh
+cvsfolder=/home/12805865839/d/cvs
+for cvsmodule in `cat /home/12805865839/d/fixed/work/cl/cvs_modulos.txt`
+do
+cd $cvsfolder/$cvsmodule
+echo "Updating $cvsmodule..."
+cvs login
+cvs update -d -P
+done
+echo "Update finished."

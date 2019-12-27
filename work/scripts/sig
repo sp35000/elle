@@ -1,0 +1,3 @@
+#!/bin/sh
+cp ~/ownCloud/to_cloud/sig/sig.old ~/d/mirror
+truecrypt ~/d/mirror/sig.old ~/d/mirror/truecrypt/

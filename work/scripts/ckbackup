@@ -1,0 +1,20 @@
+#!/bin/sh
+# importa variaveis de uso comum
+. ckvar
+echo "$datetime\n$home\n$data\n$fixed\n$mirror\n$recorded\n$scripts\n$lincfg\n$wincfg\n$pendrive\n$to_home\n$to_work\n$gears"
+echo --------------------------------------------
+echo backup da configuracao
+$scripts/cfgbackup
+echo backup do expresso
+#$scripts/mailbackup
+#echo renomeado "Google Gears for Firefox" para googlegearsforfirefox-$datetime
+#mv $data/work/Google\ Gears\ for\ Firefox/ $data/work/googlegearsforfirefox-$datetime
+echo atualizando sig
+cp -a $to_work/sig $mirror/sig
+echo copiando para pendrive
+cp -a $data/my $to_home
+cp -a $data/work $to_home
+cp -a $fixed/* $to_home
+echo copiando data para recorded
+cp -a $data/* $recorded/
+echo --------------------------------------------

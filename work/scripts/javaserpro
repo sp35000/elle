@@ -1,0 +1,4 @@
+#!/bin/sh
+sudo rm /etc/alternatives/java
+sudo ln -s /usr/lib/jvm/java-7-serpro/bin/java /etc/alternatives/java
+java -version
