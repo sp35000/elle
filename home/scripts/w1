@@ -1,4 +1,0 @@
-#!/bin/sh
-truecrypt ~/Documents/box-20100711.img ~/Documents/r --fs-options="umask=0002"
-truecrypt ~/Documents/cargo-20171112.img ~/Documents/w --fs-options="umask=0002"
-truecrypt -l

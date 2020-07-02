@@ -1,0 +1,17 @@
+#!/bin/sh
+# -------------------------------------------------------------
+# App       : Trance
+# Program   : hl
+# Function  : edit Trance homelogs
+# Site      : https://bitbucket.org/sp35000/
+# Author    : Celso Kikuchi <sp35000@yahoo.com.br>
+# -------------------------------------------------------------
+# 20191231: initial version
+# -------------------------------------------------------------
+# initialize variables
+# -------------------------------------------------------------
+# start
+case $1 in
+06|07|08|09|10|11|12|13|14|15|16|17|18|19|20) vi "$HOME/ownCloud/to_cloud/sig/trance/h$1.txt";;
+*) vi "$HOME/ownCloud/to_cloud/sig/trance/h20.txt";;
+esac

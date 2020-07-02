@@ -1,0 +1,32 @@
+#!/bin/sh
+# -------------------------------------------------------------
+# App       : Elle
+# Program   : brave
+# Function  : call Brave browser
+# Site      : https://bitbucket.org/sp35000/
+# Author    : Celso Kikuchi <sp35000@yahoo.com.br>
+# -------------------------------------------------------------
+# 20190804: initial version
+# -------------------------------------------------------------
+# Configuration
+USER_DIR="/home/$USER"
+FOLDER="d/cl/brave"
+PROGRAM="brave"
+# -------------------------------------------------------------
+# Execution
+case $1 in
+ start)
+ banner $PROGRAM
+ $USER_DIR/$FOLDER/$PROGRAM > /dev/null 2>&1 &
+  exit 0;
+  ;;
+ stop)
+  kill `ps aux|grep $PROGRAM|cut -f6 -d' '`
+  kill `ps aux|grep $PROGRAM|cut -f7 -d' '`
+  exit 0;
+  ;;
+ *)
+  echo "Usage: $PROGRAM {start|stop}"
+  exit 1;
+  ;;
+esac

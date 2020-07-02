@@ -1,6 +1,0 @@
-#!/bin/sh -x
-cd ~/p
-FILES=`ls ~/p`
-echo $FILES
-gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$HOME/output.pdf $FILES
-/usr/bin/evince $HOME/output.pdf &

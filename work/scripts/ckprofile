@@ -1,4 +1,0 @@
-#!/bin/bash
-PATH=$PATH:/home/12805865839/d/fixed/work/cl
-CVSROOT=:pserver:12805865839@localhost:/opt/cvs/sunac
-export PATH CVSROOT

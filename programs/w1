@@ -1,0 +1,6 @@
+#!/bin/sh
+truecrypt -t ~/Documents/box-20100711.img ~/Documents/r --fs-options="umask=0002"
+truecrypt -t ~/Documents/cargo-20171112.img ~/Documents/w --fs-options="umask=0002"
+truecrypt -t ~/Documents/cargo-20110512.img ~/Documents/v1 --fs-options="umask=0002"
+truecrypt -t ~/Documents/cargo-20200525.img ~/Documents/v2 --fs-options="umask=0002"
+truecrypt -t -l

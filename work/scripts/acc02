@@ -1,3 +1,0 @@
-#!/bin/sh
-grep -h $1 /home/12805865839/d/mirror/truecrypt/sig/trance/*acc02.txt
-grep -h $1 /home/12805865839/ownCloud/to_cloud/sig/trance/*acc02.txt

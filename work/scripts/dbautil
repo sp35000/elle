@@ -1,3 +1,0 @@
-#/bin/sh
-cd /home/12805865839/d/fixed/cl/dba_util
-/usr/bin/sqlplus $1

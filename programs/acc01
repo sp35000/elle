@@ -1,0 +1,15 @@
+#!/bin/sh
+# -------------------------------------------------------------
+# App       : Trance
+# Program   : acc01
+# Function  : list username
+# Site      : https://bitbucket.org/sp35000/
+# Author    : Celso Kikuchi <sp35000@yahoo.com.br>
+# -------------------------------------------------------------
+# 20191008: initial version
+# -------------------------------------------------------------
+# initialize variables
+# -------------------------------------------------------------
+# start
+# grep -h "$1" "$HOME/d/mirror/truecrypt/sig/trance/*acc01.txt"
+grep -h "$1" "$HOME/ownCloud/to_cloud/sig/trance/*acc01.txt"

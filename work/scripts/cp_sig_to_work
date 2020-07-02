@@ -1,8 +1,0 @@
-#!/bin/sh
-echo Executando $0
-DATETIME=`date +%Y%m%d%H%M%S`
-echo $DATETIME - $0 >> $SCRIPTS/ck.log
-cp -a $TO_WORK/sig $MIRROR/sig
-echo --------------------------------------------------------
-echo Resultado:
-ls -l $MIRROR/sig

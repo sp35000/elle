@@ -1,2 +1,0 @@
-#!/bin/sh
-(/opt/pentaho/3.10/biserver-ce-3.10.0-stable/biserver-ce/start-pentaho.sh &) >/dev/null 2>&1 

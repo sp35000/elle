@@ -1,0 +1,1 @@
+/home/yzmu/wbin/trance.cgi

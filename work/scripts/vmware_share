@@ -1,2 +1,0 @@
-#!/bin/bash
-sudo mount -t cifs //10.200.158.88/ts /home/12805865839/c -o user=12805865839

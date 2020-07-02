@@ -1,4 +1,0 @@
-#!/bin/bash
-JAVA_HOME=/home/12805865839/jdk1.6.0_14/
-echo $JAVA_HOME /home/12805865839/.sqldeveloper/jdk
-/home/12805865839/d/fixed/cl/sqldeveloper/sqldeveloper.sh &

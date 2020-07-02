@@ -1,4 +1,0 @@
-#!/bin/sh
-figlet "TIBCO DESIGNER"
-cd /home/12805865839/tibco/designer/5.8/bin/
-./designer &

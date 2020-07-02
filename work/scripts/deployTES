@@ -1,8 +1,0 @@
-#!/bin/sh
-case $1 in
-pagtowebrest) 
- date
- echo publicando pagtowebrest no AmbDes - dominio Testes
- scp -i /home/12805865839/.ssh/nuvem.pem -r /home/12805865839/fwork/publicacao/DES/pagtowebrest-AmbDes/testes/pagtowebrest.war 58e40c6fefe618373100014c@pagtowebrest-tes34475.apps.dev.serpro:/var/lib/openshift/58e40c6fefe618373100014c/jbosseap64/standalone/deployments ;;
-*) echo app invalido;;
-esac

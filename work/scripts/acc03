@@ -1,2 +1,0 @@
-#!/bin/sh
-grep $1 /home/12805865839/ownCloud/to_cloud/*acc03.txt

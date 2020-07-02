@@ -1,9 +1,0 @@
-#!/bin/sh
-# cria imagem mariadb
-#docker run -e MYSQL_ROOT_PASSWORD=deflade316 -e MYSQL_DATABASE=wordpress --name wordpressdb -v "$PWD/database":/var/lib/mysql -d mariadb:latest
-# cria imagem wordpress
-#docker run -e WORDPRESS_DB_PASSWORD=deflade316 --name wordpress --link wordpressdb:mysql -p 10.32.144.21:80:80 -v "$PWD/html":/var/www/html -d wordpress
-# inicia mariadb
-docker start wordpressdb
-# inicia wordpress
-docker start wordpress

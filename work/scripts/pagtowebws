@@ -1,5 +1,0 @@
-#!/bin/sh
-PATH=/home/12805865839/fwork/cj/jboss-4.2.3.GA:/home/12805865839/fwork/cj/jdk1.6.0_32/bin:$PATH
-JAVA_HOME=/home/12805865839/fwork/cj/jdk1.6.0_32/bin
-JBOSS_HOME=/home/12805865839/fwork/cj/jboss-4.2.3.GA
-/home/12805865839/fwork/cj/jboss-4.2.3.GA/bin/run.sh -b 10.32.144.21

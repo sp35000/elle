@@ -1,8 +1,0 @@
-#!/bin/sh
-DATA=`date +%Y%m%d`
-if test -e /home/12805865839/d/data/my/wnews-????????.txt 
-then
- vi /home/12805865839/d/data/my/wnews-????????.txt
-else
- vi /home/12805865839/d/data/my/wnews-$DATA.txt
-fi

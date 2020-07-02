@@ -1,3 +1,0 @@
-#!/bin/sh
-sudo adb shell "am start -a android.intent.action.MAIN -n com.vmlite.vncserver/.MainActivity"
-sudo adb shell /data/data/com.vmlite.vncserver/files/vmlitevncserver
