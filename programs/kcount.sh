@@ -1,25 +1,22 @@
-#!/bin/sh
+#!/bin/bash
 # -------------------------------------------------------------
-# App       : 
-# Program   : ftp_origem_destino.sh
-# Function  : 
+# App       : Kathryn
+# Program   : kcount.sh
+# Function  : count files per date
 # Site      : https://bitbucket.org/sp35000/
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
-# 20200119: initial version
+# 20200821: initial version
 # -------------------------------------------------------------
 # initialize variables
-PARM=$1
-ORIGIN="test"
-TARGET="test"
 # -------------------------------------------------------------
 # start
-echo "Debug: " $PARM
-$PARM << EOF
-lcd $ORIGIN
-cd $TARGET
-get
-put
-ls -l 
-EOF
-exit 0
+for YEAR in {2018..2020}
+do
+ for MONTH in {01..12}
+ do
+  FILE="$YEAR"_"$MONTH"
+  echo -n "$FILE :"
+  ls $FILE*|wc -l
+ done
+done

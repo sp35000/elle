@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 # -------------------------------------------------------------
 # App       : Elle
 # Program   : hrsync_ckrops_git.sh
@@ -17,6 +17,9 @@ GIT_LOCAL="/home/yzmu/d/git/ckrops"
 SYSDATE="$(date +%Y%m%d%H%M)"
 # -------------------------------------------------------------
 # start
+echo "\n----------------------------------------------------------"
+echo "Script: $0 START"
+date
 echo "Cleaning temporary files"
 cd $DEV
 find . -type f  -name "*~*" -print -exec rm {} \;
@@ -24,3 +27,5 @@ find . -type f  -name "*~*" -print -exec rm {} \;
 echo "Synchronizing with local Git repository"
 cd $GIT_LOCAL
 rsync -Crazvp --delete-before $DEV/ $GIT_LOCAL/sig/
+echo "Script: $0 END"
+echo "----------------------------------------------------------"

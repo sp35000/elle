@@ -9,22 +9,24 @@
 # 20200515: initial version
 # -------------------------------------------------------------
 # initialize variables
-SOURCE="/home/yzmu/case05/"
-TARGET="/home/yzmu/case06/mirrorCase05/"
+SOURCE="/home/yzmu/case05/mirrorCase04/mirror"
+TARGET="/home/yzmu/case06/mirrorCase05/mirrorCase04/mirror"
 # -------------------------------------------------------------
 # start
-echo -------------------------
-echo Script: $0
-echo -------------------------
+echo "\n----------------------------------------------------------"
+echo "Script: $0 START"
+date
 if test -e $SOURCE && test -e $TARGET; then
- echo "Mirror $SOURCE $TARGET"
- rsync -Cravzp --delete-before $SOURCE $TARGET
- cp -an $SOURCE/mirror/sig-backup/* $TARGET/mirror/sig-backup/
- ls $SOURCE/mirror/sig-backup/|wc -l
- ls $TARGET/mirror/sig-backup/|wc -l
+ echo "Mirror $SOURCE/ $TARGET"
+ rsync -Cravzp --delete-before $SOURCE/ $TARGET
+ cp -an $SOURCE/sig-backup/* $TARGET/sig-backup/
+ ls $SOURCE/sig-backup/|wc -l
+ ls $TARGET/sig-backup/|wc -l
 else
  echo "$SOURCE or $TARGET not found."
 fi
 echo "$0 Report"
 du -hs $SOURCE
 du -hs $TARGET
+echo "Script: $0 END"
+echo "----------------------------------------------------------"

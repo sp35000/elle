@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 # -------------------------------------------------------------
 # App       : Elle
 # Program   : hcp_ownCloud_dropbox.sh
@@ -13,9 +13,15 @@ SOURCE="/home/yzmu/ownCloud/"
 TARGET="/home/yzmu/Dropbox/ownCloud/"
 # -------------------------------------------------------------
 # start
-echo -------------------------
-echo Script: $0
-echo -------------------------
-#rm -Rf "${TARGET:-empty}/ownCloud"
-#cp -a $SOURCE $TARGET
+echo "\n----------------------------------------------------------"
+echo "Script: $0 START"
+date
+echo "rsync " $SOURCE $TARGET
 rsync -Cravzp --no-links --delete-before $SOURCE $TARGET
+echo "-------------------------"
+SOURCE="/home/yzmu/myCloud/"
+TARGET="/home/yzmu/Dropbox/myCloud/"
+echo "rsync " $SOURCE $TARGET
+rsync -Cravzp --no-links --delete-before $SOURCE $TARGET
+echo "Script: $0 END"
+echo "----------------------------------------------------------"

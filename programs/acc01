@@ -12,4 +12,4 @@
 # -------------------------------------------------------------
 # start
 # grep -h "$1" "$HOME/d/mirror/truecrypt/sig/trance/*acc01.txt"
-grep -h "$1" "$HOME/ownCloud/to_cloud/sig/trance/*acc01.txt"
+grep -h $1 $HOME/ownCloud/to_cloud/sig/trance/*acc01.txt

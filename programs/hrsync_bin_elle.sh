@@ -1,16 +1,17 @@
 #!/bin/sh
 # -------------------------------------------------------------
 # App       : Elle
-# Program   : hrsync_homescripts_git.sh
+# Program   : hrsync_bin_elle.sh
 # Function  : rsync home scripts and elle
-# Site      : https://bitbucket.org/sp35000/
+# Site      : https://github.com/sp35000/elle
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20200702: initial version
+# 20201222: migration from BitBucket to GitHub
 # -------------------------------------------------------------
 # initialize variables
 ORIGEM="$HOME/bin/"
-DESTINO="$HOME/d/git/elle/programs/"
+DESTINO="$HOME/git/elle/programs/"
 # -------------------------------------------------------------
 # start
 # -------------------------------------------------------------

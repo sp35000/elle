@@ -9,13 +9,17 @@
 # 20200626: initial version
 # -------------------------------------------------------------
 # initialize variables
-FOLDER="/home/yzmu/d/new"
+FOLDER="/home/yzmu/ktemp"
 SIZE="70%"
 # -------------------------------------------------------------
 # start
+echo "\n----------------------------------------------------------"
+echo "Script: $0 START"
+date
 mkdir -p $FOLDER
 for FILE in $(find . -type f -size +150k); do
  convert -resize "$SIZE" "$FILE" "$FOLDER/$FILE"
  echo -n "."
 done
-echo "\nFinished."
+echo "\nScript: $0 END"
+echo "----------------------------------------------------------"

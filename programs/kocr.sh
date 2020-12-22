@@ -23,7 +23,7 @@ for ARQUIVO in $(ls $ARQUIVOS); do
 # print filename
  echo -n "$ARQUIVO: " >> "$DIRLOG/$LOGFILE"
 # print extracted text
-gocr -l 230 "$ARQUIVO"|grep [1-2][0-9] >> "$DIRLOG/$LOGFILE"
+gocr -l 180 "$ARQUIVO"|grep [1-2][0-9] >> "$DIRLOG/$LOGFILE"
 # gocr -l 230 "$ARQUIVO"
 done
 echo "\nFinished."

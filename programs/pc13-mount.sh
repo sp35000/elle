@@ -1,8 +1,8 @@
 #!/bin/sh
 # -------------------------------------------------------------
-# App       : 
-# Program   : 
-# Function  : 
+# App       : Elle
+# Program   : pc13-mount.sh
+# Function  : mount pc13 local/remote drives
 # Site      : https://bitbucket.org/sp35000/
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
@@ -11,10 +11,6 @@
 # initialize variables
 # -------------------------------------------------------------
 # start
-echo "\n----------------------------------------------------------"
-echo "Script: $0 START"
-date
-# main
-date
-echo "Script: $0 END"
-echo "----------------------------------------------------------"
+mount -t cifs //192.168.1.4/d /home/yzmu/pc17-d/ -o username=yzmu,uid=1000
+mount -t cifs //192.168.1.8/yzmu /home/yzmu/pc18-yzmu/ -o username=yzmu,uid=1000
+df -h

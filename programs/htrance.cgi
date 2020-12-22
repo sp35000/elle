@@ -18,10 +18,7 @@ echo ""
 <br /><br />
 <div class="large-12 columns text-center">
 <h1 align="center">Trance iHome Search</h1><hr/>
-<p>
-<a href="/sig/trance/logs.html" class="btn btn-lg btn-success" >Logs</a>
-<a href="/sig/trance/news.html" class="btn btn-lg btn-success" >News</a>
-</p>
+<p><a href="/sig/trance/index.html" class="btn btn-lg btn-success" >Trance</a></p>
 <form method="post" action="/cgi-bin/htrance.cgi">
 <p>Year:&nbsp;<input type="text" name="year" maxlength="4" size="4">&nbsp;
 Month:&nbsp;<input type="text" name="month" maxlength="2" size="2">&nbsp;
