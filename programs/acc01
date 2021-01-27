@@ -7,9 +7,11 @@
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20191008: initial version
+# 20210105: adapting to myCloud
 # -------------------------------------------------------------
 # initialize variables
+sig="/home/yzmu/myCloud/ckrops/sig"
 # -------------------------------------------------------------
 # start
 # grep -h "$1" "$HOME/d/mirror/truecrypt/sig/trance/*acc01.txt"
-grep -h $1 $HOME/ownCloud/to_cloud/sig/trance/*acc01.txt
+grep -h $1 $sig/trance/*acc01.txt

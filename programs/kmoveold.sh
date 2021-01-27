@@ -12,7 +12,7 @@
 # initialize variables
 SOURCE="/home/yzmu/d/w/ScreenMaster"
 #SOURCE="/mnt/pc17-d/w/ScreenMaster"
-TARGET="/home/yzmu/d/r/photo-tmp/ScreenMaster"
+TARGET="/home/yzmu/d/r2/ScreenMaster"
 #TARGET="/mnt/pc17-d/r/photo-tmp/ScreenMaster"
 # -------------------------------------------------------------
 # start

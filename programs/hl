@@ -7,11 +7,14 @@
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20191231: initial version
+# 20210105: including h21.html
+# 20210105: adapting to myCloud
 # -------------------------------------------------------------
 # initialize variables
+sig="/home/yzmu/myCloud/ckrops/sig"
 # -------------------------------------------------------------
 # start
 case $1 in
-06|07|08|09|10|11|12|13|14|15|16|17|18|19|20) vi "$HOME/ownCloud/to_cloud/sig/trance/h$1.html";;
-*) vi "$HOME/ownCloud/to_cloud/sig/trance/h20.html";;
+06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21) vi "$sig/trance/h$1.html";;
+*) vi "$sig/trance/h21.html";;
 esac

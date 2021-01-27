@@ -7,9 +7,10 @@
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20200521: initial version
+# 20210105: adapting to myCloud
 # -------------------------------------------------------------
 # initialize variables
-DEV="/home/yzmu/ownCloud/to_cloud/sig"
+DEV="/home/yzmu/myCloud/ckrops"
 # pc17
 GIT_LOCAL="/home/yzmu/d/git/ckrops"
 # pc18

@@ -7,12 +7,13 @@
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20200119: initial version
+# 20210105: adapting to myCloud
 # -------------------------------------------------------------
 # initialize variables
 PROGRAM=$1
-ORIGIN="/home/yzmu/ownCloud/to_cloud/sig/trance"
+ORIGIN="/home/yzmu/myCloud/ckrops/sig/trance"
 TARGET="acc"
-BACKUP="/home/yzmu/myCloud/x51/backup"
+BACKUP="/home/yzmu/myCloud/to_cloud/x51"
 # -------------------------------------------------------------
 # start
 echo "\n----------------------------------------------------------"
