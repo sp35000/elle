@@ -1,5 +1,18 @@
 #!/bin/bash
-
+# -------------------------------------------------------------
+# App       : Trance
+# Program   : htrance.cgi
+# Function  : search Trance home and account files
+# Site      : https://github.com/sp35000/
+# Author    : Celso Kikuchi <sp35000@yahoo.com.br>
+# -------------------------------------------------------------
+# 20200626: initial version
+# 20210127: adapted to nextcloud
+# -------------------------------------------------------------
+# initialize variables
+trance_dir="/home/yzmu/myCloud/ckrops/sig/trance"
+# -------------------------------------------------------------
+# start
 echo Content-type: text/html
 echo ""
 
@@ -58,8 +71,8 @@ fi
 if [ "${textsearch}" != "" ]; then 
  echo '<h2 align="center">Resultados da pesquisa</h2>'
  echo "Termo pesquisado: " $textsearch '<br/><br/>'
- cd /home/yzmu/ownCloud/to_cloud/sig/trance
- grep "$textsearch" h*.txt|sort -r
+ cd "$trance_dir"
+ grep "$textsearch" h*.html|sort -r
 fi
 
 if [ "${acc01}" != "" ]; then 
