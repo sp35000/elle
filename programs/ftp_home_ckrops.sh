@@ -27,7 +27,7 @@ put acc01.txt
 put acc02.txt
 ls -l 
 lcd $BACKUP
-get serina_cnews.sql
+get serina_news.sql
 EOF
 exit 0
 echo "Script: $0 END"

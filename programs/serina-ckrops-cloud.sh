@@ -16,6 +16,6 @@ PARM=$1
 echo "\n----------------------------------------------------------"
 echo "Script: $0 START"
 date
-ssh -i /home/yzmu/.ssh/pc18 ckropae6@ckrops.com bash -c "'mysqldump -u ckropae6_wp -p\"$PARM\" ckropae6_serina cnews > /home/ckropae6/acc/serina_cnews.sql; ls -lh /home/ckropae6/acc/serina_cnews.sql'"
+ssh -i /home/yzmu/.ssh/pc18 ckropae6@ckrops.com bash -c "'mysqldump -u ckropae6_wp -p\"$PARM\" ckropae6_serina news > /home/ckropae6/acc/serina_news.sql; ls -lh /home/ckropae6/acc/serina_news.sql'"
 echo "Script: $0 END"
 echo "----------------------------------------------------------"

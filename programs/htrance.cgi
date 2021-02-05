@@ -67,7 +67,6 @@ if [ "${year}" != "" ]; then
  cal $month $year
 fi
 
-
 if [ "${textsearch}" != "" ]; then 
  echo '<h2 align="center">Resultados da pesquisa</h2>'
  echo "Termo pesquisado: " $textsearch '<br/><br/>'
