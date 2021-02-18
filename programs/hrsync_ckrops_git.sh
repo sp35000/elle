@@ -27,6 +27,6 @@ find . -type f  -name "*~*" -print -exec rm {} \;
 # find . -type f  -name "*conflict*" -print -exec rm {} \;
 echo "Synchronizing with local Git repository"
 cd $GIT_LOCAL
-rsync -Crazvp --delete-before $DEV/ $GIT_LOCAL/sig/
+rsync -Crazvp --delete-before $DEV/ $GIT_LOCAL
 echo "Script: $0 END"
 echo "----------------------------------------------------------"
