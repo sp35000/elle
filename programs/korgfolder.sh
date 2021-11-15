@@ -8,6 +8,7 @@
 # -------------------------------------------------------------
 # 20200703: initial version
 # 20201014: function organize_images created
+# 20210710: excluding r2 and w folders
 # -------------------------------------------------------------
 # functions
 reduce_images() {
@@ -31,7 +32,7 @@ KTEMP="/home/yzmu/ktemp"
 echo "\n----------------------------------------------------------"
 echo "Script: $0 START"
 date
-/home/yzmu/bin/kmoveold.sh
+#/home/yzmu/bin/kmoveold.sh
 # organizing photo
 echo "-------------------------"
 DIR="/home/yzmu/d/r/photo/ScreenMaster"
@@ -42,8 +43,8 @@ DIR="/home/yzmu/d/r/photo-ml/ScreenMaster"
 reduce_images
 # organizing w
 echo "-------------------------"
-DIR="/home/yzmu/d/w/ScreenMaster"
-reduce_images
+#DIR="/home/yzmu/d/w/ScreenMaster"
+#reduce_images
 df -h
 echo "Script: $0 END"
 echo "----------------------------------------------------------"

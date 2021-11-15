@@ -41,6 +41,9 @@ report
 sysout="$(/home/yzmu/bin/hrsync_case05_case06.sh 2>&1)"
 returnCode=$?
 report
+sysout="$(/home/yzmu/bin/memclean.sh 2>&1)"
+returnCode=$?
+report
 df -h
 date
 echo "Script: $0 END"

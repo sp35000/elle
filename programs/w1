@@ -1,7 +1,34 @@
-#!/bin/sh
-truecrypt -t ~/Documents/box-20100711.img ~/Documents/r --fs-options="umask=0002"
-truecrypt -t ~/Documents/cargo-20171112.img ~/Documents/w --fs-options="umask=0002"
-truecrypt -t ~/Documents/cargo-20110512.img ~/Documents/v1 --fs-options="umask=0002"
-truecrypt -t ~/Documents/cargo-20200525.img ~/Documents/v2 --fs-options="umask=0002"
-truecrypt -t ~/Documents/box-20201227.img ~/Documents/r2 --fs-options="umask=0002"
+#!/bin/bash
+# -------------------------------------------------------------
+# App       : Kathryn
+# Program   : w1
+# Function  : mount partitions
+# Site      : https://bitbucket.org/sp35000/
+# Author    : Celso Kikuchi <sp35000@yahoo.com.br>
+# -------------------------------------------------------------
+# 20210327: improved from initial version
+# 20210710: excluding r2 and w folders
+# -------------------------------------------------------------
+# initialize variables
+read -s -p "box:" box
+echo
+#echo $box
+read -s -p "cargo:" cargo
+echo
+#echo $cargo
+#exit
+# -------------------------------------------------------------
+# start
+echo "\n----------------------------------------------------------"
+echo "Script: $0 START"
+date
+truecrypt -t ~/Documents/box-20100711.img ~/Documents/r --fs-options="umask=0002" --password="$box" -k "" --protect-hidden=no
+#truecrypt -t ~/Documents/box-20201227.img ~/Documents/r2 --fs-options="umask=0002" --password="$box" -k "" --protect-hidden=no
+#truecrypt -t ~/Documents/cargo-20171112.img ~/Documents/w --fs-options="umask=0002" --password="$cargo" -k "" --protect-hidden=no
+truecrypt -t ~/Documents/cargo-20110512.img ~/Documents/v1 --fs-options="umask=0002" --password="$cargo" -k "" --protect-hidden=no
+truecrypt -t ~/Documents/cargo-20200525.img ~/Documents/v2 --fs-options="umask=0002" --password="$cargo" -k "" --protect-hidden=no
 truecrypt -t -l
+date
+echo "Script: $0 END"
+echo "----------------------------------------------------------"
+

@@ -12,7 +12,7 @@
 # initialize variables
 DEV="/home/yzmu/myCloud/ckrops"
 # pc17
-GIT_LOCAL="/home/yzmu/d/git/ckrops"
+GIT_LOCAL="/home/yzmu/git/ckrops"
 # pc18
 # GIT_LOCAL="/home/yzmu/d/cloud/git/ckrops"
 SYSDATE="$(date +%Y%m%d%H%M)"

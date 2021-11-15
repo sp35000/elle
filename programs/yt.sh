@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # -------------------------------------------------------------
 # App       : Trilena
 # Program   : yt.sh
@@ -10,6 +10,7 @@
 # -------------------------------------------------------------
 # initialize variables
 DIR="/home/yzmu/case04/mirror/video/youtube"
+DIR="/home/yzmu/"
 # -------------------------------------------------------------
 # to install youtube-dl
 # sudo apt-get -y install youtube-dl # install

@@ -1,0 +1,20 @@
+#!/bin/sh -x
+# -------------------------------------------------------------
+# Sistema   : Trance
+# Programa  : trancegenw
+# Funcao    : converte worklogs da Trance de txt para html
+# Site      : https://git.serpro/12805865839/ckutils
+# Autor     : Celso Kikuchi <celso.kikuchi@serpro.gov.br>
+# -------------------------------------------------------------
+# 20200626 - versao inicial
+# -------------------------------------------------------------
+# definicao de variaveis
+HOME=~/ownCloud/to_cloud/sig/trance
+OPTIONS='trance.cfg'
+# -------------------------------------------------------------
+# programa
+cd ~/bin
+case $1 in
+06|07|08|09|10|11|12|13|14|15|16|17|18|19) txt2html @$HOME/$OPTIONS --infile $HOME/w$1.txt --outfile $HOME/w$1.html;;
+*) txt2html @$HOME/$OPTIONS --infile $HOME/w20.txt --outfile $HOME/w20.html;;
+esac

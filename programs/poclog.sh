@@ -15,12 +15,6 @@ relatorio() {
   echo "fluxoPrincipal: $codRetornoFluxoPrincipal"|tee -a $logConsolidado
 }
 
-# PROPOSTA 1
-# fluxoPrincipal|tee $logConsolidado
-# capturaErro="${PIPESTATUS[0]}"
-# exit $capturaErro
-
-# PROPOSTA 2
 sysout=$("fluxoPrincipal")
 codRetornoFluxoPrincipal=$?
 relatorio
