@@ -25,6 +25,8 @@ ln -s /home/yzmu/Documents/perry_rhodan/ trilena/pr0
 ln -s /home/yzmu/case04/mirror/main/perry_rhodan/ trilena/pr1
 ln -s /home/yzmu/case05/mirrorCase04/mirror/main/perry_rhodan/ trilena/pr2
 ln -s /home/yzmu/case04/mirror/06-study serina/books
+ln -s /home/yzmu/myCloud/to_cloud/x51/mesg52/ .
+ln -s /home/yzmu/case04/mirror/photo/pvt/ext/trilena trilena/img
 date
 echo "Script: $0 END"
 echo "----------------------------------------------------------"
