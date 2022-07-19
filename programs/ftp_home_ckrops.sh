@@ -8,12 +8,13 @@
 # -------------------------------------------------------------
 # 20200119: initial version
 # 20210105: adapting to myCloud
+# 20220719: fixed error with .sql file in NextCloud
 # -------------------------------------------------------------
 # initialize variables
 PROGRAM=$1
 ORIGIN="/home/yzmu/myCloud/ckrops/sig/trance"
 TARGET="acc"
-BACKUP="/home/yzmu/myCloud/to_cloud/x51"
+BACKUP="/home/yzmu/Downloads"
 # -------------------------------------------------------------
 # start
 echo "\n----------------------------------------------------------"

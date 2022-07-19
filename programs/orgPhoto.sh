@@ -10,7 +10,7 @@
 # -------------------------------------------------------------
 # initialize variables
 #SOURCE="/home/yzmu/case04/mirror/photo/prj/finn/05-Recife"
-PREFIX="recife"
+PREFIX="$1"
 WORKFOLDER="/home/yzmu/tmp"
 HIMAGEFILES="*.JPG"
 IMAGEFILES="*.jpg"
@@ -23,6 +23,7 @@ renameFiles() {
  #ls -l $WORKFOLDER/$IMAGEFILES 
  #echo "Renaming in dropbox format:"
  echo "Folder: $WORKFOLDER" 
+ echo "Prefix: $PREFIX" 
  cd $WORKFOLDER
  # fix names
  funcoeszz zzarrumanome $HIMAGEFILES
@@ -39,92 +40,9 @@ renameFiles() {
 echo "\n----------------------------------------------------------"
 echo "Script: $0 START"
 date
-PREFIX="old"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/00-old"        
-renameFiles
+#PREFIX="old"
+#WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/00-old"        
 
-PREFIX="fortaleza"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/01-Fortaleza"
-renameFiles
-
-PREFIX="sp"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/02-SP"         
-renameFiles
-
-PREFIX="jampa"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/03-Jampa"      
-renameFiles
-
-PREFIX="canoa"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/04-Canoa"      
-renameFiles
-
-PREFIX="recife"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/05-Recife"
-renameFiles
-
-PREFIX="belem"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/06-Belem"
-renameFiles
-
-PREFIX="curitiba"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/07-Curitiba"
-renameFiles
-
-PREFIX="salvador"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/08-Salvador"
-renameFiles
-
-PREFIX="australia"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/09-Australia"
-renameFiles
-
-PREFIX="panama"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/11-Panama"
-renameFiles
-
-PREFIX="fortaleza"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/01-Fortaleza/Fortaleza-2007"
-renameFiles
-
-PREFIX="fortaleza"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/01-Fortaleza/Fortaleza-2009"
-renameFiles
-
-PREFIX="recife-jampa"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/05-Recife/RecifeJampa-0705"
-renameFiles
-
-PREFIX="recife-jampa"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/05-Recife/Recife-Jampa-201909/"
-renameFiles
-
-PREFIX="antonina"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/zz-other/Antonina"
-renameFiles
-
-PREFIX="brasilia"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/zz-other/Brasilia"
-renameFiles
-
-PREFIX="lisboa"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/zz-other/Lisboa"
-renameFiles
-
-PREFIX="manaus"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/zz-other/Manaus"
-renameFiles
-
-PREFIX="morretes"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/zz-other/Morretes"
-renameFiles
-
-PREFIX="natal"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/zz-other/Natal"
-renameFiles
-
-PREFIX="rj"
-WORKFOLDER="/home/yzmu/case04/mirror/photo/prj/finn/zz-other/RJ"
 renameFiles
 
 date
