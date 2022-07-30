@@ -1,8 +1,8 @@
 #!/bin/sh
 # -------------------------------------------------------------
 # App       : Elle
-# Program   : hrsync_to_pc19.sh
-# Function  : rsync to pc19.ck
+# Program   : hrsync_deploy_des.sh
+# Function  : rsync to DES
 # Site      : https://bitbucket.org/sp35000/
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
@@ -10,6 +10,7 @@
 # 20211028: adapted from hrsync_pc19_pc13_myCloud.sh
 # 20211103: adapted from hrsync_pc20_pc13_myCloud.sh
 # 20220422: adapted from hrsync_from_pc20.sh
+# 20220730: including pi01 in deploy
 # -------------------------------------------------------------
 # initialize variables
 SOURCE="/home/yzmu/myCloud"
@@ -24,7 +25,10 @@ echo "Cleaning temporary files"
 cd $SOURCE
 find . -type f  -name "*~*" -print -exec rm {} \;
 # find . -type f  -name "*conflict*" -print -exec rm {} \;
-echo "Synchronizing with local Git repository"
+echo "Synchronizing with DES"
+cd $TARGET
+rsync -Crazvp $SOURCE/ $TARGET
+TARGET="/home/yzmu/pi01-pi/myCloud"
 cd $TARGET
 rsync -Crazvp $SOURCE/ $TARGET
 echo "Script: $0 END"

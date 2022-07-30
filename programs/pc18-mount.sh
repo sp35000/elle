@@ -7,6 +7,7 @@
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20210602: updated including pc20.ck
+# 20220730: updated mount just pc18.ck
 # -------------------------------------------------------------
 # initialize variables
 # -------------------------------------------------------------
@@ -15,9 +16,7 @@ echo "\n----------------------------------------------------------"
 echo "Script: $0 START"
 date
 # main
-sudo mount -t cifs //pc19.ck/yzmu /mnt/pc19-yzmu/ -o username=yzmu,uid=1000
-#sudo mount -t cifs //pc20.ck/yzmu /mnt/pc20-yzmu/ -o username=yzmu,uid=1000
-sudo mount -t cifs //pc21.ck/yzmu /mnt/pc21-yzmu/ -o username=yzmu,uid=1000
+sudo mount -t cifs //pc18.ck/yzmu /mnt/pc18-yzmu/ -o username=yzmu,uid=1000
 df -h
 date
 echo "Script: $0 END"
