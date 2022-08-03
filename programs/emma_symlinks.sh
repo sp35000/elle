@@ -7,9 +7,10 @@
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20211113: initial version
+# 20220803: adapted to intranet
 # -------------------------------------------------------------
 # initialize variables
-EMMA_HOME=/home/yzmu/myCloud/ckrops/sig
+EMMA_HOME=/home/yzmu/myCloud/ckrops/intra
 # -------------------------------------------------------------
 # start
 echo "\n----------------------------------------------------------"

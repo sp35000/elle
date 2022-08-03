@@ -1,20 +1,18 @@
 #!/bin/sh
 # -------------------------------------------------------------
 # App       : Elle
-# Program   : hrsync_ckrops_git.sh
-# Function  : rsync ckrops and git
+# Program   : hrsync_w4l_git.sh
+# Function  : rsync work4love.net and git
 # Site      : https://bitbucket.org/sp35000/
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20200521: initial version
 # 20210105: adapting to myCloud
+# 20220308: adapted to work4love.net
 # -------------------------------------------------------------
 # initialize variables
-DEV="/home/yzmu/myCloud/ckrops"
-# pc17
-GIT_LOCAL="/home/yzmu/git/ckrops"
-# pc18
-# GIT_LOCAL="/home/yzmu/d/cloud/git/ckrops"
+DEV="/home/yzmu/myCloud/ckrops/work4love.net"
+GIT_LOCAL="/home/yzmu/git/work4love.net"
 SYSDATE="$(date +%Y%m%d%H%M)"
 # -------------------------------------------------------------
 # start

@@ -1,21 +1,21 @@
 #!/bin/sh
 # -------------------------------------------------------------
 # App       : Elle
-# Program   : hrsync_deploy_des.sh
-# Function  : rsync to DES
+# Program   : hrsync_sig_git.sh
+# Function  : rsync sig (Emma) and git
 # Site      : https://bitbucket.org/sp35000/
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
-# 20210724: initial version
-# 20211028: adapted from hrsync_pc19_pc13_myCloud.sh
-# 20211103: adapted from hrsync_pc20_pc13_myCloud.sh
-# 20220422: adapted from hrsync_from_pc20.sh
-# 20220730: including pi01 in deploy
-# 20220801: including pi02 in deploy
+# 20200521: initial version
+# 20210105: adapting to myCloud
+# 20220308: adapted to emma
 # -------------------------------------------------------------
 # initialize variables
-SOURCE="/home/yzmu/myCloud"
-TARGET="/home/yzmu/pc19-yzmu/myCloud"
+DEV="/home/yzmu/myCloud/ckrops/sig"
+# pc17
+GIT_LOCAL="/home/yzmu/git/emma"
+# pc18
+# GIT_LOCAL="/home/yzmu/d/cloud/git/ckrops"
 SYSDATE="$(date +%Y%m%d%H%M)"
 # -------------------------------------------------------------
 # start
@@ -23,18 +23,11 @@ echo "\n----------------------------------------------------------"
 echo "Script: $0 START"
 date
 echo "Cleaning temporary files"
-cd $SOURCE
+cd $DEV
 find . -type f  -name "*~*" -print -exec rm {} \;
 # find . -type f  -name "*conflict*" -print -exec rm {} \;
-echo "Synchronizing with DES"
-cd $TARGET
-rsync -Crazvp $SOURCE/ $TARGET
-TARGET="/home/yzmu/pi01-pi/myCloud"
-cd $TARGET
-rsync -Crazvp $SOURCE/ $TARGET
-TARGET="/home/yzmu/pi02-pi/myCloud"
-cd $TARGET
-rsync -Crazvp $SOURCE/ $TARGET
+echo "Synchronizing with local Git repository"
+cd $GIT_LOCAL
+rsync -Crazvp --delete-before $DEV/ $GIT_LOCAL
 echo "Script: $0 END"
 echo "----------------------------------------------------------"
-
