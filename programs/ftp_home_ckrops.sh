@@ -9,10 +9,11 @@
 # 20200119: initial version
 # 20210105: adapting to myCloud
 # 20220719: fixed error with .sql file in NextCloud
+# 20220804: adapting to intra
 # -------------------------------------------------------------
 # initialize variables
 PROGRAM=$1
-ORIGIN="/home/yzmu/myCloud/ckrops/sig/trance"
+ORIGIN="/home/yzmu/myCloud/ckrops/intra/trance"
 TARGET="acc"
 BACKUP="/home/yzmu/Downloads"
 # -------------------------------------------------------------

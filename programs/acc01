@@ -8,9 +8,10 @@
 # -------------------------------------------------------------
 # 20191008: initial version
 # 20210105: adapting to myCloud
+# 20220804: adapting to intra
 # -------------------------------------------------------------
 # initialize variables
-sig="/home/yzmu/myCloud/ckrops/sig"
+sig="/home/yzmu/myCloud/ckrops/intra"
 # -------------------------------------------------------------
 # start
 # grep -h "$1" "$HOME/d/mirror/truecrypt/sig/trance/*acc01.txt"

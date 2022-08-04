@@ -9,9 +9,10 @@
 # 20191231: initial version
 # 20210105: including h21.html
 # 20210105: adapting to myCloud
+# 20220804: adapting to intra
 # -------------------------------------------------------------
 # initialize variables
-sig="/home/yzmu/myCloud/ckrops/sig"
+sig="/home/yzmu/myCloud/ckrops/intra"
 # -------------------------------------------------------------
 # start
 case $1 in
