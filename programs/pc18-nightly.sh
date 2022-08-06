@@ -8,6 +8,7 @@
 # -------------------------------------------------------------
 # 20200515: initial version
 # 20210215: feat: separating in main and report
+# 20220806: feat: adapting to intra
 # -------------------------------------------------------------
 # initialize variables
 # -------------------------------------------------------------
@@ -19,7 +20,11 @@ main() {
   df -h
   #/home/yzmu/bin/korgfolder.sh
   /home/yzmu/bin/mv_home_stage.sh
-  /home/yzmu/bin/hrsync_ckrops_git.sh
+  /home/yzmu/bin/hrsync_bin_elle.sh
+  /home/yzmu/bin/hrsync_intra_git.sh
+  /home/yzmu/bin/hrsync_sig_git.sh
+  /home/yzmu/bin/hrsync_w4l_git.sh
+  #/home/yzmu/bin/hrsync_owncloud-mycloud_mega.sh
   /home/yzmu/bin/hcp_ownCloud_dropbox.sh
   #/home/yzmu/bin/hcp_docs_case04.sh
   /home/yzmu/bin/serina-ckrops-cloud.sh "$PARM"
