@@ -1,21 +1,37 @@
 #!/bin/sh
 # -------------------------------------------------------------
-# App       : Serina
-# Program   : serina-ckrops-cloud.sh
-# Function  : Backup Serina Cloud Edition database
+# App       : Trance
+# Program   : ftp_home_w4l.sh
+# Function  : update TranceAcc files
 # Site      : https://bitbucket.org/sp35000/
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
-# 20200626: initial version
+# 20200119: initial version
+# 20210105: adapting to myCloud
+# 20220719: fixed error with .sql file in NextCloud
+# 20220804: adapting to intra
+# 20220807: adapting to work4love
 # -------------------------------------------------------------
 # initialize variables
-PARM=$1
+PROGRAM=$1
+ORIGIN="/home/yzmu/myCloud/ckrops/intra/trance"
+TARGET="acc"
+BACKUP="/home/yzmu/Downloads"
 # -------------------------------------------------------------
 # start
-# -------------------------------------------------------------
 echo "\n----------------------------------------------------------"
 echo "Script: $0 START"
 date
-ssh -i /home/yzmu/.ssh/pc18 ckropae6@ckrops.com bash -c "'mysqldump -u ckropae6_wp -p\"$PARM\" ckropae6_serina news > /home/ckropae6/acc/serina_news.sql; ls -lh /home/ckropae6/acc/serina_news.sql'"
+echo "Debug: " $PROGRAM
+$PROGRAM << EOF
+lcd $ORIGIN
+cd $TARGET
+put acc01.txt
+put acc02.txt
+ls -l 
+lcd $BACKUP
+get serina_news.sql
+EOF
+exit 0
 echo "Script: $0 END"
 echo "----------------------------------------------------------"
