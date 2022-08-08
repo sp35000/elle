@@ -7,9 +7,10 @@
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20200515: initial version
-# 20210215: feat: separating in main and report
-# 20220806: feat: adapting to intra
+# 20210215: separating in main and report
+# 20220806: adapting to intra
 # 20220807: adapting to work4love
+# 20220808: adjusted to myCloud
 # -------------------------------------------------------------
 # initialize variables
 # -------------------------------------------------------------
@@ -26,7 +27,7 @@ main() {
   /home/yzmu/bin/hrsync_sig_git.sh
   /home/yzmu/bin/hrsync_w4l_git.sh
   #/home/yzmu/bin/hrsync_owncloud-mycloud_mega.sh
-  /home/yzmu/bin/hcp_ownCloud_dropbox.sh
+  /home/yzmu/bin/hcp_myCloud_dropbox.sh
   #/home/yzmu/bin/hcp_docs_case04.sh
   /home/yzmu/bin/serina-w4l-cloud.sh "$PARM"
   /home/yzmu/bin/ftp_home_w4l.sh "$FTP_HOME_CKROPS"
