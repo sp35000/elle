@@ -8,9 +8,10 @@
 # -------------------------------------------------------------
 # 20200626: initial version
 # 20210127: adapted to nextcloud
+# 20220808: adapted to ~/bin and intra
 # -------------------------------------------------------------
 # initialize variables
-trance_dir="/home/yzmu/myCloud/ckrops/sig/trance"
+trance_dir="/home/yzmu/myCloud/ckrops/intra/trance"
 # -------------------------------------------------------------
 # start
 echo Content-type: text/html
@@ -77,13 +78,13 @@ fi
 if [ "${acc01}" != "" ]; then 
  echo '<h2 align="center">Resultados da pesquisa</h2>'
  echo "Termo pesquisado: " $acc01 '<br/><br/>'
- /home/yzmu/wbin/acc01 "$acc01"
+ /home/yzmu/bin/acc01 "$acc01"
 fi
 
 if [ "${acc02}" != "" ]; then 
  echo '<h2 align="center">Resultados da pesquisa</h2>'
  echo "Termo pesquisado: " $acc02 '<br/><br/>'
- /home/yzmu/wbin/acc02 "$acc02"
+ /home/yzmu/bin/acc02 "$acc02"
 fi
 
 /bin/cat << EOM2
