@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 # -------------------------------------------------------------
 # App       : Elle
 # Program   : hrsync_case05_case06.sh
@@ -7,6 +7,7 @@
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20200515: initial version
+# 20220818: adjusting script
 # -------------------------------------------------------------
 # initialize variables
 SOURCE="/home/yzmu/case05/mirrorCase04/mirror"
