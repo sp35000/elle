@@ -7,12 +7,13 @@
 # Autor     : Celso Kikuchi <celso.kikuchi@serpro.gov.br>
 # -------------------------------------------------------------
 # 20200626 - versao inicial
+# 20220822 - ajustando para Intra
 # -------------------------------------------------------------
 # definicao de variaveis
 # estacao de trabalho
-DIR="/home/12805865839/ownCloud/to_cloud/sig/trance"
+DIR="/home/12805865839/ownCloud/to_cloud/intra/trance"
 # home office
-DIR="/home/yzmu/myCloud/ckrops/sig/trance"
+DIR="/home/yzmu/myCloud/ckrops/intra/trance"
 # -------------------------------------------------------------
 # programa
 case $1 in

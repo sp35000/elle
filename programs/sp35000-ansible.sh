@@ -7,9 +7,10 @@
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20200626: initial version
+# 20220829: updating ansible folder
 # -------------------------------------------------------------
 # initialize variables
-source="/home/yzmu/myCloud/to_cloud/lab/ansible"
+source="/home/yzmu/case04/mirror/lab/ansible"
 inventory="$source/sp35000-inventory.txt"
 playbook="$source/sp35000-playbook.yml"
 # -------------------------------------------------------------
@@ -18,9 +19,9 @@ playbook="$source/sp35000-playbook.yml"
 
 # to copy generated key to local/remote hosts
 ssh-copy-id -i ~/.ssh/ansible-D.pub yzmu@127.0.0.1
-ssh-copy-id -i ~/.ssh/ansible-D.pub yzmu@pc13.ck
+#ssh-copy-id -i ~/.ssh/ansible-D.pub yzmu@pc13.ck
 ssh-copy-id -i ~/.ssh/ansible-D.pub yzmu@pc19.ck
-ssh-copy-id -i ~/.ssh/ansible-D.pub yzmu@pc20.ck
+#ssh-copy-id -i ~/.ssh/ansible-D.pub yzmu@pc20.ck
 ssh-copy-id -i ~/.ssh/ansible-D.pub yzmu@pc21.ck
 
 # ansible ad-hoc
