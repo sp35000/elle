@@ -12,6 +12,7 @@
 # 20220422: adapted from hrsync_from_pc20.sh
 # 20220730: including pi01 in deploy
 # 20220801: including pi02 in deploy
+# 20221013: including vc02 in deploy
 # -------------------------------------------------------------
 # initialize variables
 SOURCE="/home/yzmu/myCloud"
@@ -34,6 +35,8 @@ cd $TARGET
 rsync -Crazvp $SOURCE/ $TARGET
 TARGET="/home/yzmu/pi02-pi/myCloud"
 cd $TARGET
+rsync -Crazvp $SOURCE/ $TARGET
+TARGET="/home/yzmu/vc02-yzmu/myCloud"
 rsync -Crazvp $SOURCE/ $TARGET
 echo "Script: $0 END"
 echo "----------------------------------------------------------"
