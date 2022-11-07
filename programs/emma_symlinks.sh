@@ -28,6 +28,8 @@ ln -s /home/yzmu/case05/mirrorCase04/mirror/main/perry_rhodan/ trilena/pr2
 ln -s /home/yzmu/case04/mirror/06-study serina/books
 ln -s /home/yzmu/myCloud/to_cloud/x51/mesg52/ .
 ln -s /home/yzmu/case04/mirror/photo/pvt/ext/trilena trilena/img
+ln -s /home/yzmu/case04/mirror/photo/pvt/ext/trilena trilena/img
+ln -s /home/yzmu/myCloud/to_cloud/main/6P4/cheat_sheet/ english
 date
 echo "Script: $0 END"
 echo "----------------------------------------------------------"

@@ -8,6 +8,7 @@
 # -------------------------------------------------------------
 # 20201213: initial version adapted from pc18-nightly.sh
 # 20210218: feat: separating in main and report
+# 20221030: fix: adapting to pc21.ck
 # -------------------------------------------------------------
 # initialize variables
 # -------------------------------------------------------------
@@ -41,9 +42,9 @@ report
 sysout="$(/home/yzmu/bin/hrsync_case05_case06.sh 2>&1)"
 returnCode=$?
 report
-sysout="$(/home/yzmu/bin/memclean.sh 2>&1)"
-returnCode=$?
-report
+#sysout="$(/home/yzmu/bin/memclean.sh 2>&1)"
+#returnCode=$?
+#report
 df -h
 date
 echo "Script: $0 END"

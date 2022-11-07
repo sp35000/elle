@@ -16,7 +16,6 @@
 # -------------------------------------------------------------
 # initialize variables
 SOURCE="/home/yzmu/myCloud"
-TARGET="/home/yzmu/pc19-yzmu/myCloud"
 SYSDATE="$(date +%Y%m%d%H%M)"
 # -------------------------------------------------------------
 # start
@@ -28,11 +27,12 @@ cd $SOURCE
 find . -type f  -name "*~*" -print -exec rm {} \;
 # find . -type f  -name "*conflict*" -print -exec rm {} \;
 echo "Synchronizing with DES"
-cd $TARGET
-rsync -Crazvp $SOURCE/ $TARGET
+figlet pi01.ck
 TARGET="/home/yzmu/pi01-pi/myCloud"
 cd $TARGET
 rsync -Crazvp $SOURCE/ $TARGET
+
+figlet pi02.ck
 TARGET="/home/yzmu/pi02-pi/myCloud"
 cd $TARGET
 rsync -Crazvp $SOURCE/ $TARGET
