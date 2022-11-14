@@ -12,6 +12,7 @@
 # 20220807: adapting to work4love
 # 20220808: adjusted to myCloud
 # 20221104: adjusted to backup case04 to case05
+# 20221114: including mega sync
 # -------------------------------------------------------------
 # initialize variables
 # -------------------------------------------------------------
@@ -27,7 +28,7 @@ main() {
   #/home/yzmu/bin/hrsync_intra_git.sh
   #/home/yzmu/bin/hrsync_sig_git.sh
   #/home/yzmu/bin/hrsync_w4l_git.sh
-  #/home/yzmu/bin/hrsync_owncloud-mycloud_mega.sh
+  /home/yzmu/bin/hrsync_owncloud-mycloud_mega.sh
   #/home/yzmu/bin/hcp_myCloud_dropbox.sh
   /home/yzmu/bin/hcp_docs_case04.sh
   #/home/yzmu/bin/serina-w4l-cloud.sh "$PARM"
