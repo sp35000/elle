@@ -13,6 +13,7 @@
 # 20220730: including pi01 in deploy
 # 20220801: including pi02 in deploy
 # 20221013: including vc02 in deploy
+# 20221227: disable pi02 and vc02
 # -------------------------------------------------------------
 # initialize variables
 SOURCE="/home/yzmu/myCloud"
@@ -32,12 +33,14 @@ TARGET="/home/yzmu/pi01-pi/myCloud"
 cd $TARGET
 rsync -Crazvp $SOURCE/ $TARGET
 
-figlet pi02.ck
+#figlet pi02.ck
 TARGET="/home/yzmu/pi02-pi/myCloud"
 cd $TARGET
-rsync -Crazvp $SOURCE/ $TARGET
+#rsync -Crazvp $SOURCE/ $TARGET
+
+#figlet vc02.ck
 TARGET="/home/yzmu/vc02-yzmu/myCloud"
-rsync -Crazvp $SOURCE/ $TARGET
+#rsync -Crazvp $SOURCE/ $TARGET
 echo "Script: $0 END"
 echo "----------------------------------------------------------"
 

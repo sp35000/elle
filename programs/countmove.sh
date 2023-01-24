@@ -1,20 +1,18 @@
 #!/bin/bash
 # -------------------------------------------------------------
-# App       : Finn
-# Program   : thumbgen.sh
-# Function  : generate thumbnail from video
-# Site      : https://github.com/sp35000/elle
+# App       : Elle
+# Program   : countmove.sh
+# Function  : move certain number of files from source to target
+# Site      : https://bitbucket.org/sp35000/
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
-# 20221117: initial version
+# 20230123: initial version
 # -------------------------------------------------------------
 # initialize variables
 msg_help="help"
-version="1.0"
-watermark="/home/yzmu/d/mesg52t.png"
-#source="/home/yzmu/myCloud/to_cloud/x51/mesg52/draw"
-source="/home/yzmu/d/not_watermarked/"
-target="/home/yzmu/d/watermarked/"
+version="0.0"
+source="/home/yzmu/case04/mirror/photo/original/Camera"
+target="/home/yzmu/case04/mirror/photo/original/tmp"
 # -------------------------------------------------------------
 # verify options and define flags
 while getopts "hV" option 
@@ -25,18 +23,19 @@ do
  esac
 done
 
+countmove() {
+ for file in $(ls -t $source/*.jpg|head -n 100); do
+  mv $file $target
+ done
+}
+
 # functions
 main() {
  echo "----------------------------------------------------------"
  echo "Script: $0 START"
  date
  # main
- cd "$source/"
- for f in `ls`
- do
-  echo $f
-  composite -gravity northwest -dissolve 65 "$watermark" "$f" "$target/$f"
- done
+ countmove
  date
  echo "Script: $0 END"
  echo "----------------------------------------------------------"
