@@ -18,6 +18,7 @@ echo "Script: $0 START"
 date
 mkdir -p $FOLDER
 for FILE in $(find . -type f -size +150k); do
+# convert-im6.q16 [input-option] input-file [output-option] output-file
  convert -resize "$SIZE" "$FILE" "$FOLDER/$FILE"
  echo -n "."
 done
