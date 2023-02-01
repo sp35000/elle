@@ -11,7 +11,7 @@
 # initialize variables
 msg_help="help"
 version="0.0"
-size="15%"
+size="10%"
 sourcedir="/home/yzmu/case04/mirror/photo/project/finn/current"
 targetdir="/home/yzmu/case04/mirror/photo/project/finn/thumb"
 # -------------------------------------------------------------
