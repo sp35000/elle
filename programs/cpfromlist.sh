@@ -1,16 +1,18 @@
 #!/bin/bash
 # -------------------------------------------------------------
-# App       : 
-# Program   : 
-# Function  : 
+# App       : Elle
+# Program   : cpfromlist.sh
+# Function  : copy a file from list
 # Site      : https://github.com/sp35000/elle
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
-# 20200626: initial version
+# 20230206: initial version
 # -------------------------------------------------------------
 # initialize variables
 msg_help="help"
 version="0.0"
+listfile=$1
+target="/home/yzmu/case04/mirror/photo/published"
 # -------------------------------------------------------------
 # verify options and define flags
 while getopts "hV" option 
@@ -27,6 +29,9 @@ main() {
  echo "Script: $0 START"
  date
  # main
+ for f in $(cat $listfile); do
+  cp -anv "$f" "$target"
+ done
  date
  echo "Script: $0 END"
  echo "----------------------------------------------------------"
@@ -37,7 +42,4 @@ report() {
 }
 
 # program
-sysout=$("main")
-retCode=$?
-report
-exit $retCode
+main $listfile
