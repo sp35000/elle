@@ -16,7 +16,7 @@ sourcedir="/home/yzmu/case04/mirror/photo/project/finn/current"
 targetdir="/home/yzmu/case04/mirror/photo/project/finn/thumb"
 # -------------------------------------------------------------
 # verify options and define flags
-while getopts "hV" option 
+while getopts "hV" option
 do
  case $option in
   h) echo $msg_help; exit 0 ;;
@@ -38,6 +38,7 @@ main() {
  echo "----------------------------------------------------------"
  echo "Script: $0 START"
  date
+ rm -Rf $targetdir
  # main
  for folder in $(ls $sourcedir|grep -v jpg); do
  mkdir -p $targetdir/$folder
