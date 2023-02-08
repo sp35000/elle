@@ -51,7 +51,7 @@ main() {
  ls trilena/img/*.jpg >> $targetfolder/trilena.lst
 
  # list published
- ls finn-PRO/*.jpg > $targetfolder/getty.lst
+ ls finn-PRO/getty/*.jpg > $targetfolder/getty.lst
 
  # report
  ls -lht $targetfolder/*.lst

@@ -3,10 +3,11 @@
 # App       : Finn
 # Program   : gen_finn_current.sh
 # Function  : generate reduced images for project/finn/current
-# Site      : https://bitbucket.org/sp35000/
+# Site      : https://github.com/sp35000/elle
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20230131: initial version
+# 20230208: adding getty folder
 # -------------------------------------------------------------
 # initialize variables
 msg_help="help"
@@ -45,6 +46,11 @@ main() {
   echo "Processing $folder"
   proccessFolder $folder
  done
+ sourcedir="/home/yzmu/case04/mirror/photo/published"
+ folder="getty"
+ mkdir -p $targetdir/$folder
+  echo "Processing $folder"
+  proccessFolder $folder
  date
  echo "Script: $0 END"
  echo "----------------------------------------------------------"
