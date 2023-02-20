@@ -9,8 +9,9 @@
 # 20200428: initial version
 # -------------------------------------------------------------
 # initialize variables
-DIR="/home/yzmu/case04/mirror/video/youtube"
-DIR="/home/yzmu/"
+DIR="/home/yzmu/case04/mirror/video/public/download"
+start=18
+end=19
 # -------------------------------------------------------------
 # to install youtube-dl
 # sudo apt-get -y install youtube-dl # install
@@ -30,21 +31,11 @@ time \
 --geo-bypass \
 --restrict-filenames \
 --console-title \
+--playlist-start $start \
+--playlist-end $end \
 -c \
 -o "%(title)s--%(id)s--.%(ext)s" \
 #
-# videoclips download
-DIR="/home/yzmu/case04/mirror/video/public/music"
-cd $DIR
-time \
-/usr/local/bin/youtube-dl \
--i -a $DIR/yt-tasks.txt \
---no-overwrites \
---geo-bypass \
---restrict-filenames \
---console-title \
--c \
--o "%(title)s--%(id)s--.%(ext)s" \
 date
 echo "Script: $0 END"
 echo "----------------------------------------------------------"
