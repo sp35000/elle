@@ -14,6 +14,7 @@
 # 20221104: adjusted to backup case04 to case05
 # 20221114: including mega sync
 # 20230207: reorganizing script
+# 20230303: changed hrsync_owncloud-mycloud_mega.sh to hrsync_mycloud_mega.sh
 # -------------------------------------------------------------
 # initialize variables
 # -------------------------------------------------------------
@@ -30,7 +31,7 @@ main() {
   #/home/yzmu/bin/hrsync_sig_git.sh
   #/home/yzmu/bin/hrsync_w4l_git.sh
   /home/yzmu/bin/gen_image_list.sh
-  /home/yzmu/bin/hrsync_owncloud-mycloud_mega.sh
+  /home/yzmu/bin/hrsync_mycloud_mega.sh
   #/home/yzmu/bin/hcp_myCloud_dropbox.sh
   /home/yzmu/bin/hcp_docs_case04.sh
   #/home/yzmu/bin/serina-w4l-cloud.sh "$PARM"
