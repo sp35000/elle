@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 # -------------------------------------------------------------
 # App       : Elle
 # Program   : hrsync_owncloud-mycloud_mega.sh
