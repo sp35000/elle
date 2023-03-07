@@ -2,13 +2,14 @@
 # -------------------------------------------------------------
 # App       : Emma
 # Program   : emma_symlinks.sh
-# Function  : create Emma symbolic links 
+# Function  : create Emma symbolic links
 # Site      : https://bitbucket.org/sp35000/
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20211113: initial version
 # 20220803: adapted to intranet
 # 20221114: correcting photo links
+# 20230307: add link to marla
 # -------------------------------------------------------------
 # initialize variables
 EMMA_HOME=/home/yzmu/myCloud/ckrops/intra
@@ -30,6 +31,7 @@ ln -s /home/yzmu/case04/mirror/06-study serina/books
 ln -s /home/yzmu/myCloud/to_cloud/x51/mesg52/ .
 ln -s /home/yzmu/case04/mirror/photo/private/ext/trilena trilena/img
 ln -s /home/yzmu/myCloud/to_cloud/main/6P4/cheat_sheet/ english
+ln -s /home/yzmu/myCloud/to_cloud/marla/ .
 date
 echo "Script: $0 END"
 echo "----------------------------------------------------------"
