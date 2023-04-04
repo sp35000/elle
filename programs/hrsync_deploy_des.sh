@@ -33,10 +33,10 @@ TARGET="/home/yzmu/pi01-pi/myCloud"
 cd $TARGET
 rsync -Crazvp $SOURCE/ $TARGET
 
-#figlet pi02.ck
+figlet pi02.ck
 TARGET="/home/yzmu/pi02-pi/myCloud"
 cd $TARGET
-#rsync -Crazvp $SOURCE/ $TARGET
+rsync -Crazvp $SOURCE/ $TARGET
 
 #figlet vc02.ck
 TARGET="/home/yzmu/vc02-yzmu/myCloud"
