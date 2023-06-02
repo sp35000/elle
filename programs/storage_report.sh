@@ -7,6 +7,7 @@
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20200626: initial version
+# 20230421: updating sort for case05
 # -------------------------------------------------------------
 # initialize variables
 msg_help="help"
@@ -40,8 +41,7 @@ main() {
  echo "----------------------------------------------------------"
  echo "case05 general report"
  du -hs /home/yzmu/case05/
- du -hs /home/yzmu/case05/movies
- du -hs /home/yzmu/case05/virtualbox
+ du -hs /home/yzmu/case05/*|grep G|sort -nr
  echo "----------------------------------------------------------"
  date
  echo "Script: $0 END"

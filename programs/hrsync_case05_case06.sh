@@ -10,8 +10,8 @@
 # 20220818: adjusting script
 # -------------------------------------------------------------
 # initialize variables
-SOURCE="/home/yzmu/case05/mirrorCase04/mirror"
-TARGET="/home/yzmu/case06/mirrorCase05/mirrorCase04/mirror"
+SOURCE="/home/yzmu/case05" 
+TARGET="/home/yzmu/case06/mirrorCase05"
 # -------------------------------------------------------------
 # start
 echo "\n----------------------------------------------------------"
@@ -21,8 +21,8 @@ if test -e $SOURCE && test -e $TARGET; then
  echo "Mirror $SOURCE/ $TARGET"
  rsync -Cravzp --delete-before $SOURCE/ $TARGET
  cp -an $SOURCE/sig-backup/* $TARGET/sig-backup/
- ls $SOURCE/sig-backup/|wc -l
- ls $TARGET/sig-backup/|wc -l
+ ls $SOURCE/mirrorCase04/mirror/sig-backup/|wc -l
+ ls $TARGET/mirrorCase04/mirror/sig-backup/|wc -l
 else
  echo "$SOURCE or $TARGET not found."
 fi

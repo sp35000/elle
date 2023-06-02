@@ -35,6 +35,7 @@ time \
 --playlist-end $end \
 -c \
 -o "%(title)s--%(id)s--.%(ext)s" \
+-u "u35tv01" -p "2958boca(*"
 #
 date
 echo "Script: $0 END"
