@@ -10,6 +10,7 @@
 # 20220803: adapted to intranet
 # 20221114: correcting photo links
 # 20230307: add link to marla
+# 20230608: mesg52 folder adjust
 # -------------------------------------------------------------
 # initialize variables
 EMMA_HOME=/home/yzmu/myCloud/ckrops/intra

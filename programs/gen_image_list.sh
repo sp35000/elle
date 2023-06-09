@@ -7,6 +7,7 @@
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20200626: initial version
+# 20230609: mesg52 folder adjust
 # -------------------------------------------------------------
 # initialize variables
 msg_help="help"
