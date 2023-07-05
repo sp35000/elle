@@ -1,19 +1,20 @@
 #!/bin/sh
 # -------------------------------------------------------------
 # App       : Elle
-# Program   : hrsync_owncloud-mycloud_mega.sh
-# Function  : rsync owncloud and mycloud with mega
-# Site      : https://bitbucket.org/sp35000/
+# Program   : hrsync_local_mega.sh
+# Function  : rsync mirror with mega
+# Site      : https://github.com/sp35000/elle
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20200714: initial version
 # 20230220: template updated
+# 20230615: changed to hrsync_local_mega.sh
 # -------------------------------------------------------------
 # initialize variables
 msg_help="help"
 version="0.0"
-MYCLOUD="/home/yzmu/myCloud"
-MEGA="/home/yzmu/MEGAsync"
+LOCAL="/home/yzmu/case04/mirror/06-study"
+MEGA="/home/yzmu/MEGAsync/mirror"
 SYSDATE="$(date +%Y%m%d%H%M)"
 
 # verify options and define flags
@@ -31,7 +32,7 @@ main() {
  echo "Script: $0 START"
  date
  # main
- rsync -Crazvp --delete-before $MYCLOUD $MEGA/
+ rsync -Crazvp --delete-before $LOCAL $MEGA/
  date
  echo "Script: $0 END"
  echo "----------------------------------------------------------"
@@ -42,7 +43,8 @@ report() {
 }
 
 # program
-sysout=$("main")
+#sysout=$("main")
+main
 retCode=$?
 report
 exit $retCode
