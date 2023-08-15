@@ -12,8 +12,8 @@
 msg_help="help"
 version="1.0"
 watermark="/home/yzmu/d/mesg52t.png"
-#source="/home/yzmu/myCloud/to_cloud/x51/mesg52/draw"
-source="/home/yzmu/d/not_watermarked/"
+source="/home/yzmu/myCloud/to_cloud/x51/2011-mesg52/draw"
+#source="/home/yzmu/d/not_watermarked/"
 target="/home/yzmu/d/watermarked/"
 # -------------------------------------------------------------
 # verify options and define flags
@@ -35,7 +35,8 @@ main() {
  for f in `ls`
  do
   echo $f
-  composite -gravity northwest -dissolve 65 "$watermark" "$f" "$target/$f"
+#  composite -gravity northwest -dissolve 65 "$watermark" "$f" "$target/$f"
+  composite -gravity northwest -dissolve 65 -verbose "$watermark" "$f" "$target/$f"
  done
  date
  echo "Script: $0 END"

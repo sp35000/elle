@@ -11,6 +11,7 @@
 # 20221114: correcting photo links
 # 20230307: add link to marla
 # 20230608: mesg52 folder adjust
+# 20230815: add link to ronette
 # -------------------------------------------------------------
 # initialize variables
 EMMA_HOME=/home/yzmu/myCloud/ckrops/intra
@@ -33,6 +34,7 @@ ln -s /home/yzmu/myCloud/to_cloud/x51/2011-mesg52/draw mesg52
 ln -s /home/yzmu/case04/mirror/photo/private/ext/trilena trilena/img
 ln -s /home/yzmu/myCloud/to_cloud/main/6P4/cheat_sheet/ english
 ln -s /home/yzmu/myCloud/to_cloud/marla/ .
+ln -s /home/yzmu/d/cc/ronette/ .
 date
 echo "Script: $0 END"
 echo "----------------------------------------------------------"
