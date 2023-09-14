@@ -7,6 +7,7 @@
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20200929: initial version
+# 20230913: adjusting funcoeszz call with full path
 # -------------------------------------------------------------
 # initialize variables
 #SOURCE="/home/yzmu/case04/mirror/photo/prj/finn/05-Recife"
@@ -26,11 +27,11 @@ renameFiles() {
  echo "Prefix: $PREFIX" 
  cd $WORKFOLDER
  # fix names
- funcoeszz zzarrumanome $HIMAGEFILES
+ /home/yzmu/d/cl/funcoeszz zzarrumanome $HIMAGEFILES
  # rename in dropbox format
- funcoeszz zznomefoto --dropbox $IMAGEFILES
+ /home/yzmu/d/cl/funcoeszz zznomefoto --dropbox $IMAGEFILES
  # fix names
- funcoeszz zzarrumanome $IMAGEFILES
+ /home/yzmu/d/cl/funcoeszz zzarrumanome $IMAGEFILES
  # include folder name
  mmv '*.jpg' $PREFIX'-#1.jpg'
  ls -l $WORKFOLDER/$IMAGEFILES

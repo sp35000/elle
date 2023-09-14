@@ -32,8 +32,8 @@ callOrgPhoto() {
  ln -s "$basedir/$city" $tmpdir
  echo "Files in $city to proccess: "
  ls -l "$basedir/$city" | wc -l
-# /home/yzmu/bin/orgPhoto.sh $city
- cp -an $tmpdir/*.jpg "$target/$city/"
+ /home/yzmu/bin/orgPhoto.sh $city
+ cp -anv $tmpdir/*.jpg "$target/$city/"
  echo "Files in $city after processing: "
  ls "$target/$city"|wc -l
  rm $tmpdir 
@@ -61,11 +61,13 @@ main() {
  echo "Script: $0 START"
  date
  # main
- city="belem"
- callOrgPhoto
  city="canoa"
  callOrgPhoto
- production
+ city="manaus"
+ callOrgPhoto
+ city="panama"
+ callOrgPhoto
+# production
  date
  echo "Script: $0 END"
  echo "----------------------------------------------------------"
