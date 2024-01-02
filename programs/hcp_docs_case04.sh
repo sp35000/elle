@@ -8,6 +8,7 @@
 # -------------------------------------------------------------
 # 20200408: initial version
 # 20211111: stage transformed in symlink, no backup needed any more.
+# 20231120: adjusting to copy all dino tenders
 # -------------------------------------------------------------
 # initialize variables
 SOURCE="/home/yzmu/d"
@@ -19,7 +20,7 @@ date
 echo "Backup tenders"
 TARGET="/home/yzmu/case04/mirror"
 cp $SOURCE/box*.img $TARGET
-cp $SOURCE/dino-20101002.img $TARGET
+cp $SOURCE/dino*.img $TARGET
 cp $SOURCE/cargo*.img $TARGET
 #
 #echo "Backup stage"

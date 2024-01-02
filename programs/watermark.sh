@@ -12,8 +12,8 @@
 msg_help="help"
 version="1.0"
 watermark="/home/yzmu/d/mesg52t.png"
-source="/home/yzmu/myCloud/to_cloud/x51/2011-mesg52/draw"
-#source="/home/yzmu/d/not_watermarked/"
+#source="/home/yzmu/myCloud/to_cloud/x51/2011-mesg52/draw"
+source="/home/yzmu/d/draw/"
 target="/home/yzmu/d/watermarked/"
 # -------------------------------------------------------------
 # verify options and define flags

@@ -10,12 +10,15 @@
 # 20210105: including h21.html
 # 20210105: adapting to myCloud
 # 20220804: adapting to intra
+# 20240102: automate parameters
 # -------------------------------------------------------------
 # initialize variables
 sig="/home/yzmu/myCloud/ckrops/intra"
+current=$(date +%y)
 # -------------------------------------------------------------
 # start
-case $1 in
-06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23) vi "$sig/trance/h$1.html";;
-*) vi "$sig/trance/h23.html";;
-esac
+if [ -n "$1" ]; then
+ vi "$sig/trance/h$1.html"
+else
+ vi "$sig/trance/h$current.html"
+fi
