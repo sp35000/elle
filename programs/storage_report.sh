@@ -8,6 +8,7 @@
 # -------------------------------------------------------------
 # 20200626: initial version
 # 20230421: updating sort for case05
+# 20240202: adding /home/yzmu/case04/mirror/06-study/
 # -------------------------------------------------------------
 # initialize variables
 msg_help="help"
@@ -36,6 +37,8 @@ main() {
  du -hs /home/yzmu/case04/mirror/*|grep G|sort -nr
  echo "case04 video report"
  du -hs /home/yzmu/case04/mirror/video/*|sort -nr
+ echo "case04 06-study report"
+ du -hs /home/yzmu/case04/mirror/06-study/*|sort -nr
  echo "case04 photo report"
  du -hs /home/yzmu/case04/mirror/photo/*|sort -nr
  echo "----------------------------------------------------------"
