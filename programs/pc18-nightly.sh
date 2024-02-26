@@ -16,6 +16,7 @@
 # 20230207: reorganizing script
 # 20230303: changed hrsync_owncloud-mycloud_mega.sh to hrsync_mycloud_mega.sh
 # 20230615: changed hrsync_mycloud_mega.sh to hrsync_local_mega.sh
+# 20240226: adding tail urltest-asesfla.log 
 # -------------------------------------------------------------
 # initialize variables
 # -------------------------------------------------------------
@@ -41,6 +42,7 @@ main() {
   /home/yzmu/bin/hrsync_case05_case06.sh
   /home/yzmu/bin/storage_report.sh
   df -h
+  tail /home/yzmu/log/urltest-asesfla.log
   date
   echo "Script: $0 END"
   echo "----------------------------------------------------------"
