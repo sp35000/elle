@@ -1,16 +1,18 @@
 #!/bin/bash
 # -------------------------------------------------------------
 # App       : Elle
-# Program   : urlextract.sh
+# Program   : fileurlextract.sh
 # Function  : extract links from html page
 # Site      : https://github.com/sp35000/elle
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
-# 20200626: initial version
+# 20240229: initial version
+# 20240305: name changed from urlextract.sh to fileurlextract.sh
 # -------------------------------------------------------------
 # initialize variables
 msg_help="help"
 version="0.0"
+list=$1
 # -------------------------------------------------------------
 # verify options and define flags
 while getopts "hV" option
@@ -20,9 +22,6 @@ do
   V) echo $version; exit 0 ;;
  esac
 done
-
-# variables
-list=$1
 
 # functions
 main() {
