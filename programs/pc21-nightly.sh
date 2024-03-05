@@ -32,7 +32,7 @@ main() {
   /home/yzmu/bin/hcp_myCloud_dropbox.sh
   /home/yzmu/bin/hrsync_deploy_des.sh
   #/home/yzmu/bin/hcp_docs_case04.sh
-  /home/yzmu/bin/serina-w4l-cloud.sh "$PARM"
+  /home/yzmu/bin/serina-w4l-cloud.sh
   /home/yzmu/bin/ftp_home_w4l.sh "$FTP_HOME_CKROPS"
   #/home/yzmu/bin/hrsync_case04_case05.sh
   #/home/yzmu/bin/hrsync_case05_case06.sh
