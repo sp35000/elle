@@ -14,8 +14,11 @@
 # 20221104: adjusted to pc21.ck
 # 20230301: including hrsync_deploy_des.sh
 # 20240308: including dbbackup.sh
+# 20240308: improving comments
+# 20240308: verify serina old links
 # -------------------------------------------------------------
 # initialize variables
+opsDir="$HOME/myCloud/ckrops/ops"
 # -------------------------------------------------------------
 # functions
 main() {
@@ -23,21 +26,30 @@ main() {
   echo "Script: $0 START"
   date
   df -h
-  #/home/yzmu/bin/korgfolder.sh
+  # copy local files
   /home/yzmu/bin/mv_home_stage.sh
+
+  # sync local files with git repositories
   /home/yzmu/bin/hrsync_bin_elle.sh
   /home/yzmu/bin/hrsync_intra_git.sh
   /home/yzmu/bin/hrsync_sig_git.sh
   /home/yzmu/bin/hrsync_w4l_git.sh
-  #/home/yzmu/bin/hrsync_owncloud-mycloud_mega.sh
+
+  # sync local files with cloud storage
   /home/yzmu/bin/hcp_myCloud_dropbox.sh
+
+  # deploy local files to DES environment
   /home/yzmu/bin/hrsync_deploy_des.sh
-  #/home/yzmu/bin/hcp_docs_case04.sh
+
+  # sync local and production files
   /home/yzmu/bin/serina-w4l-cloud.sh
   /home/yzmu/bin/ftp_home_w4l.sh "$FTP_HOME_CKROPS"
-  /home/yzmu/bin/dbbackup.sh"
-  #/home/yzmu/bin/hrsync_case04_case05.sh
-  #/home/yzmu/bin/hrsync_case05_case06.sh
+  /home/yzmu/bin/dbbackup.sh
+
+  # verify serina old links
+  /home/yzmu/bin/mysqlurlextract.sh > "$opsDir/mysqlurlextract.log"
+  /home/yzmu/bin/murltest.sh "$opsDir/mysqlurlextract.log" >> "$opsDir/murltest.log"
+
   df -h
   date
   echo "Script: $0 END"
