@@ -25,14 +25,18 @@ done
 
 # functions
 main() {
-  cat $list | while read lines
-  do
-    for line in $lines
+  if (test "$list" == "") then
+    echo "No file informed."
+  else
+    cat $list | while read lines
     do
-      #echo $line
-      lynx -dump -hiddenlinks=listonly "$line" |grep http |cut -c 7- |grep -v '\[' |grep -v '\]'
+      for line in $lines
+      do
+        #echo $line
+        lynx -dump -hiddenlinks=listonly "$line" |grep http |cut -c 7- |grep -v '\[' |grep -v '\]'
+      done
     done
-  done
+  fi
 }
 
 report() {

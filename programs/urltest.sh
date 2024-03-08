@@ -11,6 +11,8 @@
 # initialize variables
 msg_help="help"
 version="0.0"
+url=$1
+dataExecucao="$(date +%Y%m%d%H%M)"
 # -------------------------------------------------------------
 # verify options and define flags
 while getopts "hV" option
@@ -21,13 +23,14 @@ do
  esac
 done
 
-# variables
-url=$1
-dataExecucao="$(date +%Y%m%d%H%M)"
 # functions
 main() {
-  status=$(curl -o /dev/null -s -w '%{http_code}' "$url")
-  echo "$dataExecucao,$url,$status"
+  if (test "$url" == "") then
+    echo "No url informed."
+  else
+    status=$(curl -o /dev/null -s -w '%{http_code}' "$url")
+    echo "$dataExecucao,$url,$status"
+  fi
 }
 
 report() {

@@ -37,7 +37,7 @@ main() {
   serinanews=$(echo "$serinanews$query) ORDER BY id;")
   # echo "$serinanews$serinaadv"
   mysql -h"work4love.net" ckropae6_serina -e "$serinanews"|tr "|" " "|grep -v link
-  mysql -h"work4love.net" ckropae6_serina -e "$serinaadv"|tr "|" " "|grep -v url
+  # mysql -h"work4love.net" ckropae6_serina -e "$serinaadv"|tr "|" " "|grep -v url
 }
 
 report() {
