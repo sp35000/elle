@@ -3,7 +3,7 @@
 # App       : Elle
 # Program   : pc21-nightly.sh
 # Function  : Nightly job controller
-# Site      : https://bitbucket.org/sp35000/
+# Site      : https://github.com/sp35000/
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20200515: initial version
@@ -47,8 +47,8 @@ main() {
   /home/yzmu/bin/dbbackup.sh
 
   # verify serina old links
-  /home/yzmu/bin/mysqlurlextract.sh > "$opsDir/mysqlurlextract.log"
-  /home/yzmu/bin/murltest.sh "$opsDir/mysqlurlextract.log" >> "$opsDir/murltest.log"
+  /home/yzmu/bin/mysqlurlextract.sh > "$opsDir/url-serina.txt"
+  /home/yzmu/bin/murltest.sh "$opsDir/url-serina.txt" >> "$opsDir/url-serina.log"
 
   df -h
   date
