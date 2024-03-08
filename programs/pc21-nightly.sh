@@ -13,6 +13,7 @@
 # 20220808: adjusted to myCloud
 # 20221104: adjusted to pc21.ck
 # 20230301: including hrsync_deploy_des.sh
+# 20240308: including dbbackup.sh
 # -------------------------------------------------------------
 # initialize variables
 # -------------------------------------------------------------
@@ -34,6 +35,7 @@ main() {
   #/home/yzmu/bin/hcp_docs_case04.sh
   /home/yzmu/bin/serina-w4l-cloud.sh
   /home/yzmu/bin/ftp_home_w4l.sh "$FTP_HOME_CKROPS"
+  /home/yzmu/bin/dbbackup.sh"
   #/home/yzmu/bin/hrsync_case04_case05.sh
   #/home/yzmu/bin/hrsync_case05_case06.sh
   df -h
