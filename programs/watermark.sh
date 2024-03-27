@@ -11,13 +11,13 @@
 # initialize variables
 msg_help="help"
 version="1.0"
-watermark="/home/yzmu/d/mesg52t.png"
+watermark="/home/yzmu/d/2011-mesg52-stage/mesg52t.png"
 #source="/home/yzmu/myCloud/to_cloud/x51/2011-mesg52/draw"
-source="/home/yzmu/d/draw/"
-target="/home/yzmu/d/watermarked/"
+source="/home/yzmu/d/2011-mesg52-stage/draw/"
+target="/home/yzmu/d/2011-mesg52-stage/watermarked/"
 # -------------------------------------------------------------
 # verify options and define flags
-while getopts "hV" option 
+while getopts "hV" option
 do
  case $option in
   h) echo $msg_help; exit 0 ;;
