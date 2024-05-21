@@ -1,17 +1,17 @@
 #!/bin/bash
 # -------------------------------------------------------------
-# App       :
+# App       : 
 # Program   :
 # Function  :
 # Site      : https://github.com/sp35000/elle
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
-# 20200626: initial version
-# 20230609: mesg52 folder adjust
+version="20200626: initial version"
+version="20230609: mesg52 folder adjust"
+version="20240521: listdir included"
 # -------------------------------------------------------------
 # initialize variables
 msg_help="help"
-version="0.0"
 sourcefolder="/var/www/html/intra"
 targetfolder="/home/yzmu/myCloud/ckrops/intra/include"
 # -------------------------------------------------------------
@@ -25,35 +25,44 @@ do
 done
 
 # functions
+listdir() {
+    if [ -d "$sourcefolder/$1" ] ; then
+        ls "$sourcefolder/$1"/*.jpg > "$targetfolder/$2"
+    else
+        echo "$1 don't exist"
+    fi
+}
+
 main() {
  echo "----------------------------------------------------------"
  echo "Script: $0 START"
  date
  # main
- cd $sourcefolder
+ echo "----------------------------------------------------------"
  # list Amidala
- ls max/amidala/*.jpg > $targetfolder/amidala.lst
+ listdir max/amidala amidala.lst
 
  # list Max
- ls max/elo316/*.jpg > $targetfolder/max.lst
- ls max/Nordeste-1993/*.jpg >> $targetfolder/max.lst
- ls max/outros/*.jpg >> $targetfolder/max.lst
- ls max/serpro/*.jpg >> $targetfolder/max.lst
+ listdir max/elo316 max.lst
+ listdir max/Nordeste-1993 max.lst
+ listdir max/outros max.lst
+ listdir max/serpro max.lst
 
  # list Finn
- ls finn-DES/old/*/*.jpg > $targetfolder/finnold.lst
- ls finn-DES/thumb/*/*.jpg > $targetfolder/finnthumb.lst
+ listdir "finn-DES/old/*" finnold.lst
+ listdir "finn-DES/thumb/*" finnthumb.lst
 
  # list mesg52
- ls mesg52/draw/*.jpg > $targetfolder/mesg52.lst
+ listdir mesg52/draw mesg52.lst
 
  # list trilena
- ls trilena/*.jpg > $targetfolder/trilena.lst
- ls trilena/img/*.jpg >> $targetfolder/trilena.lst
+ listdir trilena trilena.lst
+ listdir trilena/img trilena.lst
 
  # list published
- ls finn-PRO/getty/*.jpg > $targetfolder/getty.lst
+ listdir finn-PRO/getty getty.lst
 
+ echo "----------------------------------------------------------"
  # report
  ls -lht $targetfolder/*.lst
 

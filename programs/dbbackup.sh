@@ -7,13 +7,14 @@
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20240308: initial version
+# 20240416: adjust dbBackupDir
 # -------------------------------------------------------------
 # initialize variables
 msgHelp="help"
 version="0.0"
 dbDir="$HOME/Downloads"
 dbFile="serina_news"
-dbBackupDir="$HOME/case04/mirror/backup"
+dbBackupDir="$HOME/case04/mirror/backup/sig/serina"
 grepDate="$(date +%y%m%d)"
 # -------------------------------------------------------------
 # verify options and define flags
