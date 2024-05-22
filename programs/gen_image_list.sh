@@ -27,7 +27,15 @@ done
 # functions
 listdir() {
     if [ -d "$sourcefolder/$1" ] ; then
-        ls "$sourcefolder/$1"/*.jpg > "$targetfolder/$2"
+        cd "$sourcefolder"
+        ls "$1"/*.jpg > "$targetfolder/$2"
+        ls "$1"/*.jpg >> "$targetfolder/$2"
+        ls "$1"/*/*.jpg >> "$targetfolder/$2"
+        ls "$1"/*/*.jpg >> "$targetfolder/$2"
+        ls "$1"/*.png >> "$targetfolder/$2"
+        ls "$1"/*.png >> "$targetfolder/$2"
+        ls "$1"/*/*.png >> "$targetfolder/$2"
+        ls "$1"/*/*.png >> "$targetfolder/$2"
     else
         echo "$1 don't exist"
     fi
@@ -43,21 +51,17 @@ main() {
  listdir max/amidala amidala.lst
 
  # list Max
- listdir max/elo316 max.lst
- listdir max/Nordeste-1993 max.lst
- listdir max/outros max.lst
- listdir max/serpro max.lst
+ listdir max max.lst
 
  # list Finn
- listdir "finn-DES/old/*" finnold.lst
- listdir "finn-DES/thumb/*" finnthumb.lst
+ listdir "finn-DES/old" finnold.lst
+ listdir "finn-DES/thumb" finnthumb.lst
 
  # list mesg52
  listdir mesg52/draw mesg52.lst
 
  # list trilena
  listdir trilena trilena.lst
- listdir trilena/img trilena.lst
 
  # list published
  listdir finn-PRO/getty getty.lst
