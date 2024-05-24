@@ -28,6 +28,7 @@ main() {
   df -h
   # copy local files
   /home/yzmu/bin/mv_home_stage.sh
+  /home/yzmu/bin/hrsync_myCloud_storage.sh
 
   # sync local files with git repositories
   /home/yzmu/bin/hrsync_bin_elle.sh
