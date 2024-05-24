@@ -6,12 +6,13 @@
 # Site      : https://github.com/sp35000/elle
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
-# 20200702: initial version
-# 20201222: migration from BitBucket to GitHub
+version="20200702: initial version"
+version="20201222: migration from BitBucket to GitHub"
+version="20240523: adapting to elle.conf"
 # -------------------------------------------------------------
 # initialize variables
-ORIGEM="$HOME/bin/"
-DESTINO="$HOME/git/elle/programs/"
+source="$HOME/bin/"
+target="$HOME/git/elle/programs/"
 # -------------------------------------------------------------
 # start
 # -------------------------------------------------------------
@@ -19,4 +20,4 @@ DESTINO="$HOME/git/elle/programs/"
 echo -------------------------
 echo Script: $0
 echo -------------------------
-rsync --delete-before -Cravzp $ORIGEM $DESTINO
+rsync --delete-before -Cravzp $source $target

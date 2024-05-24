@@ -6,13 +6,24 @@
 # Site      : https://bitbucket.org/sp35000/
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
-# 20191008: initial version
-# 20210105: adapting to myCloud
-# 20220804: adapting to intra
+version="20191008: initial version"
+version="20210105: adapting to myCloud"
+version="20220804: adapting to intra"
+version="20240523: adapting to elle.conf"
 # -------------------------------------------------------------
 # initialize variables
-sig="/home/yzmu/myCloud/ckrops/intra"
+msg_help="help"
+. /home/yzmu/etc/elle.conf
+# -------------------------------------------------------------
+# verify options and define flags
+while getopts "hV" option 
+do
+ case $option in
+  h) echo $msg_help; exit 0 ;;
+  V) echo $version; exit 0 ;;
+ esac
+done
 # -------------------------------------------------------------
 # start
 # grep -h "$1" "$HOME/d/mirror/truecrypt/sig/trance/*acc01.txt"
-grep -h $1 $sig/trance/*acc01.txt
+grep -h $1 $intra/trance/*acc01.txt

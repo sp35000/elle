@@ -6,11 +6,10 @@
 # Site      : https://github.com/sp35000/elle
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
-# 20200626: initial version
+version="20yymmdd: initial version"
 # -------------------------------------------------------------
 # initialize variables
 msg_help="help"
-version="0.0"
 # -------------------------------------------------------------
 # verify options and define flags
 while getopts "hV" option 
