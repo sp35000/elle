@@ -14,7 +14,7 @@ version="20240522: listdir improved"
 # initialize variables
 msg_help="help"
 sourcefolder="/var/www/html/intra"
-targetfolder="/home/yzmu/myCloud/ckrops/intra/include"
+targetfolder="/home/yzmu/myCloud/mirror/dev/intra/include"
 workfile="gen_image_list.tmp"
 # -------------------------------------------------------------
 # verify options and define flags

@@ -16,7 +16,7 @@
 # 20221227: disable pi02 and vc02
 # -------------------------------------------------------------
 # initialize variables
-SOURCE="/home/yzmu/myCloud"
+SOURCE="/home/yzmu/myCloud/mirror"
 SYSDATE="$(date +%Y%m%d%H%M)"
 # -------------------------------------------------------------
 # start
@@ -26,20 +26,19 @@ date
 echo "Cleaning temporary files"
 cd $SOURCE
 find . -type f  -name "*~*" -print -exec rm {} \;
-# find . -type f  -name "*conflict*" -print -exec rm {} \;
 echo "Synchronizing with DES"
 figlet pi01.ck
-TARGET="/home/yzmu/pi01-pi/myCloud"
+TARGET="/home/yzmu/pi01-pi/myCloud/mirror"
 cd $TARGET
 rsync -Crazvp $SOURCE/ $TARGET
 
 figlet pi02.ck
-TARGET="/home/yzmu/pi02-pi/myCloud"
+TARGET="/home/yzmu/pi02-pi/myCloud/mirror"
 cd $TARGET
 rsync -Crazvp $SOURCE/ $TARGET
 
 #figlet vc02.ck
-TARGET="/home/yzmu/vc02-yzmu/myCloud"
+TARGET="/home/yzmu/vc02-yzmu/myCloud/mirror"
 #rsync -Crazvp $SOURCE/ $TARGET
 echo "Script: $0 END"
 echo "----------------------------------------------------------"
