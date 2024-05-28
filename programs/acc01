@@ -12,7 +12,7 @@ version="20220804: adapting to intra"
 version="20240523: adapting to elle.conf"
 # -------------------------------------------------------------
 # initialize variables
-msg_help="help"
+msg_help="list username"
 . /home/yzmu/etc/elle.conf
 # -------------------------------------------------------------
 # verify options and define flags
@@ -21,6 +21,7 @@ do
  case $option in
   h) echo $msg_help; exit 0 ;;
   V) echo $version; exit 0 ;;
+  *) exit 1;;
  esac
 done
 # -------------------------------------------------------------

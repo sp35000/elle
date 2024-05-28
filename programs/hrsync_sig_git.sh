@@ -9,25 +9,34 @@
 # 20200521: initial version
 # 20210105: adapting to myCloud
 # 20220308: adapted to emma
+version="20240528: adapting to elle.conf"
 # -------------------------------------------------------------
 # initialize variables
-DEV="/home/yzmu/myCloud/ckrops/sig"
-# pc17
-GIT_LOCAL="/home/yzmu/git/emma"
-# pc18
-# GIT_LOCAL="/home/yzmu/d/cloud/git/ckrops"
-SYSDATE="$(date +%Y%m%d%H%M)"
+msg_help="rsync sig (Emma) and git"
+. /home/yzmu/etc/elle.conf
+# -------------------------------------------------------------
+# verify options and define flags
+while getopts "hV" option 
+do
+ case $option in
+  h) echo $msg_help; exit 0 ;;
+  V) echo $version; exit 0 ;;
+  *) exit 1;;
+ esac
+done
+git_emma="$git/emma"
 # -------------------------------------------------------------
 # start
 echo "\n----------------------------------------------------------"
 echo "Script: $0 START"
 date
 echo "Cleaning temporary files"
-cd $DEV
+cd $sig
 find . -type f  -name "*~*" -print -exec rm {} \;
 # find . -type f  -name "*conflict*" -print -exec rm {} \;
 echo "Synchronizing with local Git repository"
-cd $GIT_LOCAL
-rsync -Crazvp --delete-before $DEV/ $GIT_LOCAL
+cd $git_emma
+command="rsync -Crazvp --delete-before $sig/ $git_emma"
+$command
 echo "Script: $0 END"
 echo "----------------------------------------------------------"
