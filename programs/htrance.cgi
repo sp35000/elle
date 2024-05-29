@@ -9,9 +9,22 @@
 # 20200626: initial version
 # 20210127: adapted to nextcloud
 # 20220808: adapted to ~/bin and intra
+version="20240528: adapting to elle.conf"
 # -------------------------------------------------------------
 # initialize variables
-trance_dir="/home/yzmu/myCloud/ckrops/intra/trance"
+msg_help="search Trance home and account files"
+. /home/yzmu/etc/elle.conf
+# -------------------------------------------------------------
+# verify options and define flags
+while getopts "hV" option 
+do
+ case $option in
+  h) echo $msg_help; exit 0 ;;
+  V) echo $version; exit 0 ;;
+  *) exit 1;;
+ esac
+done
+trance_dir="$intra/trance"
 # -------------------------------------------------------------
 # start
 echo Content-type: text/html
@@ -72,7 +85,7 @@ if [ "${textsearch}" != "" ]; then
  echo '<h2 align="center">Resultados da pesquisa</h2>'
  echo "Termo pesquisado: " $textsearch '<br/><br/>'
  cd "$trance_dir"
- grep "$textsearch" h*.html|sort -r
+ grep -i "$textsearch" h*.html|sort -r
 fi
 
 if [ "${acc01}" != "" ]; then 
