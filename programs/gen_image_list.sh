@@ -62,7 +62,7 @@ main() {
  listdir finn-PRO/getty getty.lst
 
  # list trilena
- listdir trilena trilena.lst
+ listdir trilena/img trilena.lst
 
  echo "----------------------------------------------------------"
  # report
