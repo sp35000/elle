@@ -8,8 +8,20 @@
 # -------------------------------------------------------------
 # 20200507: initial version
 # 20200828: changing sources
+version="20240603: sig-backup excluded as it is inside mirror"
 # -------------------------------------------------------------
 # initialize variables
+msg_help="rsync case04 and case05"
+# -------------------------------------------------------------
+# verify options and define flags
+while getopts "hV" option 
+do
+ case $option in
+  h) echo "$msg_help"; exit 0 ;;
+  V) echo "$version"; exit 0 ;;
+  *) exit 1;;
+ esac
+done
 SOURCE="/home/yzmu/case04/mirror"
 TARGET="/home/yzmu/case05/mirrorCase04/mirror"
 # -------------------------------------------------------------
@@ -20,9 +32,6 @@ date
 if test -e $SOURCE && test -e $TARGET; then
  echo "Mirror $SOURCE/ $TARGET"
  rsync -Cravzp --delete-before $SOURCE/ $TARGET
- cp -an $SOURCE/sig-backup/* $TARGET/sig-backup/
- ls $SOURCE/sig-backup/|wc -l
- ls $TARGET/sig-backup/|wc -l
  echo "$0 Report"
  du -hs $SOURCE
  du -hs $TARGET

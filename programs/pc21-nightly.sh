@@ -18,7 +18,7 @@
 # 20240308: verify serina old links
 # -------------------------------------------------------------
 # initialize variables
-opsDir="$HOME/myCloud/ckrops/ops"
+opsDir="$HOME/myCloud/mirror/ops"
 # -------------------------------------------------------------
 # functions
 main() {
