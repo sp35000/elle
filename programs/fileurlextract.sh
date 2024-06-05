@@ -10,9 +10,19 @@
 # 20240305: name changed from urlextract.sh to fileurlextract.sh
 # -------------------------------------------------------------
 # initialize variables
-msg_help="help"
-version="0.0"
+msg_help="Monthlly job controller"
+source /home/yzmu/etc/elle.conf
 list=$1
+# -------------------------------------------------------------
+# verify options and define flags
+while getopts "hV" option 
+do
+ case $option in
+  h) echo "$msg_help"; exit 0 ;;
+  V) echo "$version"; exit 0 ;;
+  *) exit 1;;
+ esac
+done
 # -------------------------------------------------------------
 # verify options and define flags
 while getopts "hV" option
