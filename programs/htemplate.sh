@@ -10,6 +10,7 @@ version="20yymmdd: initial version"
 # -------------------------------------------------------------
 # initialize variables
 msg_help="help"
+source "/home/yzmu/etc/elle.conf"
 # -------------------------------------------------------------
 # verify options and define flags
 while getopts "hV" option 
