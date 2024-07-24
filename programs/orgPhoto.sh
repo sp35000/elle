@@ -12,8 +12,9 @@
 # initialize variables
 #SOURCE="/home/yzmu/case04/mirror/photo/prj/finn/05-Recife"
 PREFIX="$1"
+#EXTENSION="$2"
 WORKFOLDER="/home/yzmu/tmp"
-HIMAGEFILES="*.JPG"
+IMAGEFILES="*.jpg"
 IMAGEFILES="*.jpg"
 # -------------------------------------------------------------
 # functions
@@ -21,19 +22,19 @@ renameFiles() {
  # copy SOURCE to TEMP
  #mkdir -p $WORKFOLDER
  #cp $SOURCE/$IMAGEFILES $WORKFOLDER
- #ls -l $WORKFOLDER/$IMAGEFILES 
+ #ls -l $WORKFOLDER/*.jpg
  #echo "Renaming in dropbox format:"
  echo "Folder: $WORKFOLDER" 
  echo "Prefix: $PREFIX" 
  cd $WORKFOLDER
  # fix names
- /home/yzmu/d/cl/funcoeszz zzarrumanome $HIMAGEFILES
+ /home/yzmu/d/cl/funcoeszz zzarrumanome $IMAGEFILES
  # rename in dropbox format
  /home/yzmu/d/cl/funcoeszz zznomefoto --dropbox $IMAGEFILES
  # fix names
  /home/yzmu/d/cl/funcoeszz zzarrumanome $IMAGEFILES
  # include folder name
- mmv '*.jpg' $PREFIX'-#1.jpg'
+ mmv "*.jpg" $PREFIX"-#1.jpg"
  ls -l $WORKFOLDER/$IMAGEFILES
 }
 # -------------------------------------------------------------
