@@ -9,7 +9,9 @@
 # 20200626: initial version
 # 20210127: adapted to nextcloud
 # 20220808: adapted to ~/bin and intra
-version="20240528: adapting to elle.conf"
+# 20240528: adapting to elle.conf
+# 20241017: wrong path fixed, elle.conf not working
+version="20241017: wrong path fixed, elle.conf not working"
 # -------------------------------------------------------------
 # initialize variables
 msg_help="search Trance home and account files"
@@ -85,7 +87,7 @@ if [ "${textsearch}" != "" ]; then
  echo '<h2 align="center">Resultados da pesquisa</h2>'
  echo "Termo pesquisado: " $textsearch '<br/><br/>'
  cd "$trance_dir"
- grep -i "$textsearch" h*.html|sort -r
+ grep -i "$textsearch" /home/pi/myCloud/mirror/dev/intra/trance/h*.html|sort -r
 fi
 
 if [ "${acc01}" != "" ]; then 

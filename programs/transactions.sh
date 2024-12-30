@@ -7,8 +7,11 @@
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20210329: improved from initial version
+# 20241230: variables source and target added
 # -------------------------------------------------------------
 # initialize variables
+source="/media/yzmu/b07c0ea6-d09c-4030-9710-868b995cd3af/d"
+target="/media/yzmu/b07c0ea6-d09c-4030-9710-868b995cd3af/d"
 read -s -p "tender:" tender
 echo
 # -------------------------------------------------------------
@@ -16,10 +19,10 @@ echo
 echo "\n----------------------------------------------------------"
 echo "Script: $0 START"
 date
-truecrypt -t ~/Documents/dino-20101002.img ~/Documents/t --fs-options="umask=0002" --password="$tender" -k "" --protect-hidden=no
-truecrypt -t ~/Documents/dino-20231120.img ~/Documents/t2 --fs-options="umask=0002" --password="$tender" -k "" --protect-hidden=no
+truecrypt -t "$source/dino-20101002.img" "$target/t" --fs-options="umask=0002" --password="$tender" -k "" --protect-hidden=no
+truecrypt -t "$source/dino-20231120.img" "$target/t2" --fs-options="umask=0002" --password="$tender" -k "" --protect-hidden=no
 truecrypt -t -l
+df -h
 date
 echo "Script: $0 END"
 echo "----------------------------------------------------------"
-

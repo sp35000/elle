@@ -6,12 +6,14 @@
 # Site      : https://github.com/sp35000/elle
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
-# 20200626: initial version
+# 20240522: initial version
+# 20241014: extract Trance worklogs
 # -------------------------------------------------------------
 # initialize variables
-msg_help="help"
-version="20240522: initial version"
-sourcefolder="/home/yzmu/myCloud/ckrops/intra/trance"
+msg_help="extract Trance data"
+version="20241014: extract Trance worklogs"
+sourcefolder="/home/yzmu/myCloud/mirror/dev/intra/trance"
+input_files=$1
 # -------------------------------------------------------------
 # verify options and define flags
 while getopts "hV" option 
@@ -29,7 +31,7 @@ main() {
  date
  # main
  cd "$sourcefolder"
- grep ^[0-2][[:digit:]][0-1][[:digit:]][0-3][[:digit:]]: *.html|cut -c 10-|grep -v ^[0-2][[:digit:]][0-1][[:digit:]]3[2-9]:|sort -r
+ grep ^[0-2][[:digit:]][0-1][[:digit:]][0-3][[:digit:]]: w*.html|cut -c 1-|grep -v ^[0-2][[:digit:]][0-1][[:digit:]]3[2-9]:|sort -r
  date
  echo "Script: $0 END"
  echo "----------------------------------------------------------"
