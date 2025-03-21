@@ -14,6 +14,7 @@
 # 20220801: including pi02 in deploy
 # 20221013: including vc02 in deploy
 # 20221227: disable pi02 and vc02
+# 20250321: added vs01
 # -------------------------------------------------------------
 # initialize variables
 SOURCE="/home/yzmu/myCloud/mirror"
@@ -37,9 +38,11 @@ TARGET="/home/yzmu/pi02-pi/myCloud/mirror"
 cd $TARGET
 rsync -Crazvp $SOURCE/ $TARGET
 
-#figlet vc02.ck
-TARGET="/home/yzmu/vc02-yzmu/myCloud/mirror"
-#rsync -Crazvp $SOURCE/ $TARGET
+figlet vs01.ck
+TARGET="/mnt/vs01-osboxes/myCloud/mirror"
+rsync -Crazvp $SOURCE/dev   $TARGET/dev/
+rsync -Crazvp $SOURCE/ops   $TARGET/ops
+rsync -Crazvp $SOURCE/marla $TARGET/marla
 echo "Script: $0 END"
 echo "----------------------------------------------------------"
 
