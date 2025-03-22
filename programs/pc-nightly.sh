@@ -52,11 +52,22 @@ pc21() {
  figlet "pc21"    
   # sync local files with cloud storage
   /home/yzmu/bin/hcp_myCloud_dropbox.sh
+
+  # verify serina old links
+  /home/yzmu/bin/mysqlurlextract.sh > "$opsDir/url-serina.txt"
+  echo "-------------------------------------------------------------"
+  echo "Showing $opsDir/url-serina.txt"
+  cat "$opsDir/url-serina.txt"
+  /home/yzmu/bin/murltest.sh "$opsDir/url-serina.txt" >> "$opsDir/url-serina.log"
+  echo "-------------------------------------------------------------"
+  echo "Showing $opsDir/url-serina.log"
+  cat "$opsDir/url-serina.log"
 }
 
 pc22() {
  figlet "pc22"
   df -h
+
   # copy local files
   #/home/yzmu/bin/mv_home_stage.sh
   /home/yzmu/bin/hrsync_myCloud_storage.sh
@@ -75,9 +86,6 @@ pc22() {
   /home/yzmu/bin/ftp_home_w4l.sh "$FTP_HOME_CKROPS"
   /home/yzmu/bin/dbbackup.sh
 
-  # verify serina old links
-  /home/yzmu/bin/mysqlurlextract.sh > "$opsDir/url-serina.txt"
-  /home/yzmu/bin/murltest.sh "$opsDir/url-serina.txt" >> "$opsDir/url-serina.log"
   df -h
 }
 
