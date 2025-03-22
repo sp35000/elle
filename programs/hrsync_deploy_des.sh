@@ -40,9 +40,10 @@ rsync -Crazvp $SOURCE/ $TARGET
 
 figlet vs01.ck
 TARGET="/mnt/vs01-osboxes/myCloud/mirror"
-rsync -Crazvp $SOURCE/dev   $TARGET/dev/
-rsync -Crazvp $SOURCE/ops   $TARGET/ops
-rsync -Crazvp $SOURCE/marla $TARGET/marla
+cd $TARGET
+rsync -Crazvp $SOURCE/dev   $TARGET
+rsync -Crazvp $SOURCE/ops   $TARGET
+rsync -Crazvp $SOURCE/marla $TARGET
 echo "Script: $0 END"
 echo "----------------------------------------------------------"
 
