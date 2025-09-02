@@ -10,6 +10,7 @@
 # 20210710: excluding r2 and w folders
 # 20241230: case07 variables source and target added
 # 20250120: pc18 variables source and target added
+# 20250503: v3 replacing v1/v2 (archived)
 # # -------------------------------------------------------------
 # initialize variables
 # source="/media/yzmu/b07c0ea6-d09c-4030-9710-868b995cd3af"
@@ -28,8 +29,9 @@ echo
 echo "\n----------------------------------------------------------"
 echo "Script: $0 START"
 date
-truecrypt -t "$source/cargo-20110512.img" "$target/v1" --fs-options="umask=0002" --password="$cargo" -k "" --protect-hidden=no
-truecrypt -t "$source/cargo-20200525.img" "$target/v2" --fs-options="umask=0002" --password="$cargo" -k "" --protect-hidden=no
+# truecrypt -t "$source/cargo-20110512.img" "$target/v1" --fs-options="umask=0002" --password="$cargo" -k "" --protect-hidden=no
+truecrypt -t "$source/cargo-20250503.img" "$target/v2" --fs-options="umask=0002" --password="$cargo" -k "" --protect-hidden=no
+truecrypt -t "$source/cargo-20200525.img" "$target/v3" --fs-options="umask=0002" --password="$cargo" -k "" --protect-hidden=no
 source="/home/yzmu/d"
 target="/home/yzmu/d"
 truecrypt -t "$source/box-20100711.img" "$target/r" --fs-options="umask=0002" --password="$box" -k "" --protect-hidden=no

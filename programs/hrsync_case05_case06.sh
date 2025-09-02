@@ -27,7 +27,7 @@ else
  echo "$SOURCE or $TARGET not found."
 fi
 echo "$0 Report"
-du -hs $SOURCE
-du -hs $TARGET
+du -hs $SOURCE/
+du -hs $TARGET/
 echo "Script: $0 END"
 echo "----------------------------------------------------------"

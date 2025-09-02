@@ -6,15 +6,18 @@
 # Site      : https://github.com/sp35000/elle
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
-version="20200626: initial version"
-version="20230609: mesg52 folder adjust"
-version="20240521: listdir included"
-version="20240522: listdir improved"
+# version="20200626: initial version"
+# version="20230609: mesg52 folder adjust"
+# version="20240521: listdir included"
+# version="20240522: listdir improved"
+# version="20250402: listsubdir added"
+version="20250509: output folder adusted"
 # -------------------------------------------------------------
 # initialize variables
-msg_help="help"
+msg_help="list images for further exibition"
 sourcefolder="/var/www/html/intra"
-targetfolder="/home/yzmu/myCloud/mirror/dev/intra/include"
+# targetfolder="/home/yzmu/myCloud/mirror/dev/intra/include"
+targetfolder="/home/yzmu/myCloud/mirror/ops/output"
 workfile="gen_image_list.tmp"
 # -------------------------------------------------------------
 # verify options and define flags
@@ -39,6 +42,16 @@ listdir() {
     fi
 }
 
+listsubdir() {
+ folder=$1
+ prefix=$2
+ echo "$sourcefolder $folder"
+ cd "$sourcefolder/$folder"
+ for subfolder in $(ls -d *); do
+  listdir "$folder/$subfolder" "$prefix-$subfolder.lst" 
+ done
+}
+
 main() {
  echo "----------------------------------------------------------"
  echo "Script: $0 START"
@@ -54,6 +67,8 @@ main() {
  # list Finn
  listdir "finn-DES/old" finnold.lst
  listdir "finn-DES/thumb" finnthumb.lst
+ listsubdir "finn-DES/old" old
+ listsubdir "finn-DES/current" current
 
  # list mesg52
  listdir mesg52 mesg52.lst
@@ -82,3 +97,5 @@ sysout=$("main")
 retCode=$?
 report
 exit $retCode
+# listsubdir "finn-DES/old"
+# ls -lht $targetfolder/*.lst

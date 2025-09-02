@@ -7,6 +7,7 @@
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20250321: initial version
+# 20250327: changing pc21 output
 # -------------------------------------------------------------
 version="20250321: initial version"
 # -------------------------------------------------------------
@@ -54,14 +55,14 @@ pc21() {
   /home/yzmu/bin/hcp_myCloud_dropbox.sh
 
   # verify serina old links
-  /home/yzmu/bin/mysqlurlextract.sh > "$opsDir/url-serina.txt"
+  /home/yzmu/bin/mysqlurlextract.sh > "$outputDir/url-serina.txt"
   echo "-------------------------------------------------------------"
-  echo "Showing $opsDir/url-serina.txt"
-  cat "$opsDir/url-serina.txt"
-  /home/yzmu/bin/murltest.sh "$opsDir/url-serina.txt" >> "$opsDir/url-serina.log"
+  echo "Counting $outputDir/url-serina.txt"
+  cat "$outputDir/url-serina.txt"|wc -l
+  /home/yzmu/bin/murltest.sh "$outputDir/url-serina.txt" >> "$outputDir/url-serina.log"
   echo "-------------------------------------------------------------"
-  echo "Showing $opsDir/url-serina.log"
-  cat "$opsDir/url-serina.log"
+  echo "Counting $outputDir/url-serina.log"
+  cat "$outputDir/url-serina.log"|wc -l
 }
 
 pc22() {
@@ -96,6 +97,7 @@ main() {
  # main
  case $HOSTNAME in
   pc18) pc18;;
+  pc18ck) pc18;;
   pc21) pc21;;
   pc22) pc22;;
  esac

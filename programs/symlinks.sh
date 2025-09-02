@@ -6,7 +6,8 @@
 # Site      : https://github.com/sp35000/elle
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
-version="20240528: initial version"
+# version="20240528: initial version"
+version="20250509: using HOME variable to adapt to any user"
 # -------------------------------------------------------------
 # initialize variables
 msg_help="create/remove symlinks"
@@ -19,7 +20,8 @@ create_symlinks() {
     do
         symlink=$(echo "$linha"|awk -F '=' '{print $1}')
         folder=$(echo "$linha"|awk -F '=' '{print $2}')
-        command="ln -s $folder $symlink"
+        command="ln -s $HOME/$folder $HOME/$symlink"
+        # echo "Debug: $command"
         $command
     done     
 }
@@ -28,7 +30,8 @@ remove_symlinks() {
     echo "remove_symlinks from $inputfile"
     cut -d'=' -f1 $inputfile | while read linha
     do
-        command="rm $linha"
+        command="rm $HOME/$linha"
+        # echo "Debug: $command"
         $command
     done 
 }

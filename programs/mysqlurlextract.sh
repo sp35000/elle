@@ -7,10 +7,11 @@
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20240305: initial version
+# 20250507: adjusted to cloudflare migration
 # -------------------------------------------------------------
 # initialize variables
-msg_help="help"
-version="0.0"
+msg_help="extract 4 years old addresses from serina news"
+version="adjusted to cloudflare migration"
 year="$(date +%Y)"
 date="$(date +%m%d)"
 serinanews="SELECT link FROM news WHERE initial_date in ("
@@ -36,7 +37,8 @@ main() {
   query=${query::-1}
   serinanews=$(echo "$serinanews$query) ORDER BY id;")
   # echo "$serinanews$serinaadv"
-  mysql -h"work4love.net" ckropae6_serina -e "$serinanews"|tr "|" " "|grep -v link
+  # mysql -h"work4love.net" ckropae6_serina -e "$serinanews"|tr "|" " "|grep -v link
+  mysql -h"208.91.199.47" ckropae6_serina -e "$serinanews"|tr "|" " "|grep -v link  
   # mysql -h"work4love.net" ckropae6_serina -e "$serinaadv"|tr "|" " "|grep -v url
 }
 
