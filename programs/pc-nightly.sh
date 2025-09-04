@@ -79,6 +79,10 @@ pc22() {
   /home/yzmu/bin/hrsync_sig_git.sh
   /home/yzmu/bin/hrsync_w4l_git.sh
 
+  # generate mensagembr opengraph
+  /usr/bin/lynx -dump http://192.168.0.22/intra/util/mensagembrtest.php > /dev/null
+  /usr/bin/lynx -dump http://192.168.0.22/intra/util/mensagembrOpenGraph.php
+
   # deploy local files to DES environment
   /home/yzmu/bin/hrsync_deploy_des.sh
 
