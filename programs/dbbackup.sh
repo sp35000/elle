@@ -8,12 +8,12 @@
 # -------------------------------------------------------------
 # 20240308: initial version
 # 20240416: adjust dbBackupDir
+# 20250910: adjusted for serinadb.sql and emmadb.sql backup
 # -------------------------------------------------------------
 # initialize variables
 msgHelp="help"
 version="0.0"
 dbDir="$HOME/Downloads"
-dbFile="serina_news"
 dbBackupDir="$HOME/case04/mirror/backup/sig/serina"
 grepDate="$(date +%y%m%d)"
 # -------------------------------------------------------------
@@ -37,6 +37,9 @@ main() {
  echo "----------------------------------------------------------"
  echo "Script: $0 START"
  date
+ dbFile="serinadb"
+ cp "$dbDir/$dbFile.sql" "$dbBackupDir/$dbFile-$grepDate.sql"
+ dbFile="emmadb"
  cp "$dbDir/$dbFile.sql" "$dbBackupDir/$dbFile-$grepDate.sql"
  removeOld
  ls -lht "$dbBackupDir"

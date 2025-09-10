@@ -9,6 +9,7 @@
 # 20200626: initial version
 # 20220807: adapting to work4love
 # 20250412: adapting to Cloudflare
+# 20250910: changing to call hotdbbackup.sh
 # -------------------------------------------------------------
 # initialize variables
 PARM=$1
@@ -18,6 +19,6 @@ PARM=$1
 echo "\n----------------------------------------------------------"
 echo "Script: $0 START"
 date
-ssh -i /home/yzmu/.ssh/pc18 ckropae6@w4l bash -c "'mysqldump ckropae6_serina news > /home/ckropae6/acc/serina_news.sql; ls -lh /home/ckropae6/acc/serina_news.sql'"
+ssh -i /home/yzmu/.ssh/pc18 ckropae6@w4l bash -c "/home2/ckropae6/opt/hotdbbackup.sh"
 echo "Script: $0 END"
 echo "----------------------------------------------------------"
