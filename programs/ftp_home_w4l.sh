@@ -11,10 +11,11 @@
 # 20220719: fixed error with .sql file in NextCloud
 # 20220804: adapting to intra
 # 20220807: adapting to work4love
-version="20240529: adapting to elle.conf"
+# 20250912: getting db*.sql
+version="20250912: getting db*.sql"
 # -------------------------------------------------------------
 # initialize variables
-msg_help="update TranceAcc files"
+msg_help="update TranceAcc and getting db*.sql"
 . /home/yzmu/etc/elle.conf
 program=$1
 source="$intra/trance"
@@ -43,7 +44,7 @@ put acc01.txt
 put acc02.txt
 ls -l 
 lcd $backup
-get serina_news.sql
+get *db.sql
 EOF
 exit 0
 echo "Script: $0 END"

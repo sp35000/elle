@@ -8,8 +8,9 @@
 # -------------------------------------------------------------
 # 20250321: initial version
 # 20250327: changing pc21 output
+# 20250917: generate mensagembr opengraph in PRO environment
 # -------------------------------------------------------------
-version="20250321: initial version"
+version="20250917: generate mensagembr opengraph in PRO environment"
 # -------------------------------------------------------------
 # initialize variables
 msg_help="Nightly job controller"
@@ -79,18 +80,22 @@ pc22() {
   /home/yzmu/bin/hrsync_sig_git.sh
   /home/yzmu/bin/hrsync_w4l_git.sh
 
-  # generate mensagembr opengraph
+  # generate mensagembr opengraph in DES environment
   /usr/bin/lynx -dump http://192.168.0.22/intra/util/mensagembrtest.php > /dev/null
   /usr/bin/lynx -dump http://192.168.0.22/intra/util/mensagembrOpenGraph.php
 
   # deploy local files to DES environment
   /home/yzmu/bin/hrsync_deploy_des.sh
 
+  # generate mensagembr opengraph in PRO environment
+  figlet "PRO"
+  /usr/bin/lynx -dump https://work4love.net/sig/util/mensagembrtest.php > /dev/null
+  /usr/bin/lynx -dump https://work4love.net/sig/util/mensagembrOpenGraph.php
+
   # sync local and production files
   /home/yzmu/bin/serina-w4l-cloud.sh
   /home/yzmu/bin/ftp_home_w4l.sh "$FTP_HOME_CKROPS"
   /home/yzmu/bin/dbbackup.sh
-
   df -h
 }
 
