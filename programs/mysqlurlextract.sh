@@ -8,14 +8,16 @@
 # -------------------------------------------------------------
 # 20240305: initial version
 # 20250507: adjusted to cloudflare migration
+# 20251002: extract both serina and marla
 # -------------------------------------------------------------
 # initialize variables
+source "/home/yzmu/etc/elle.conf"
 msg_help="extract 4 years old addresses from serina news"
 version="adjusted to cloudflare migration"
 year="$(date +%Y)"
 date="$(date +%m%d)"
 serinanews="SELECT link FROM news WHERE initial_date in ("
-serinaadv="SELECT url FROM advtgt;"
+serinaadv="SELECT url,advtext FROM advtgt;"
 # -------------------------------------------------------------
 # verify options and define flags
 while getopts "hV" option
@@ -37,9 +39,8 @@ main() {
   query=${query::-1}
   serinanews=$(echo "$serinanews$query) ORDER BY id;")
   # echo "$serinanews$serinaadv"
-  # mysql -h"work4love.net" ckropae6_serina -e "$serinanews"|tr "|" " "|grep -v link
-  mysql -h"208.91.199.47" ckropae6_serina -e "$serinanews"|tr "|" " "|grep -v link  
-  # mysql -h"work4love.net" ckropae6_serina -e "$serinaadv"|tr "|" " "|grep -v url
+  mysql -h"208.91.199.47" ckropae6_serina -e "$serinanews"|tr "|" " "|grep -v link > "$outputDir/url-serina.txt" 
+  mysql -h"208.91.199.47" ckropae6_serina -e "$serinaadv"|tr "|" " "|grep -v link > "$outputDir/url-marla.txt" 
 }
 
 report() {

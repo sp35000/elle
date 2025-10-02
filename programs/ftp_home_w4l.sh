@@ -12,7 +12,8 @@
 # 20220804: adapting to intra
 # 20220807: adapting to work4love
 # 20250912: getting db*.sql
-version="20250912: getting db*.sql"
+# 20251002: put url-marla.txt
+version="20251002: put url-marla.txt"
 # -------------------------------------------------------------
 # initialize variables
 msg_help="update TranceAcc and getting db*.sql"
@@ -42,6 +43,8 @@ lcd $source
 cd $target
 put acc01.txt
 put acc02.txt
+lcd $outputDir
+put url-marla.txt
 ls -l 
 lcd $backup
 get *db.sql
