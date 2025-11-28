@@ -9,15 +9,16 @@
 # 20250321: initial version
 # 20250327: changing pc21 output
 # 20250917: generate mensagembr opengraph in PRO environment
+# 20251107: running just from pc18
 # -------------------------------------------------------------
-version="20250917: generate mensagembr opengraph in PRO environment"
+version="20251107: running just from pc18"
 # -------------------------------------------------------------
 # initialize variables
 msg_help="Nightly job controller"
 source "/home/yzmu/etc/elle.conf"
 # -------------------------------------------------------------
 # verify options and define flags
-while getopts "hV" option 
+while getopts "hV" option
 do
  case $option in
   h) echo "$msg_help"; exit 0 ;;
@@ -32,26 +33,48 @@ pc18() {
   df -h
   #/home/yzmu/bin/korgfolder.sh
   #/home/yzmu/bin/mv_home_stage.sh
-  #/home/yzmu/bin/hrsync_bin_elle.sh
-  #/home/yzmu/bin/hrsync_intra_git.sh
-  #/home/yzmu/bin/hrsync_sig_git.sh
-  #/home/yzmu/bin/hrsync_w4l_git.sh
   #/home/yzmu/bin/gen_finn_current.sh
   /home/yzmu/bin/gen_image_list.sh
   /home/yzmu/bin/hrsync_local_mega.sh
-  #/home/yzmu/bin/hcp_myCloud_dropbox.sh
+  /home/yzmu/bin/hcp_myCloud_dropbox.sh
   /home/yzmu/bin/hcp_docs_case04.sh
-  #/home/yzmu/bin/serina-w4l-cloud.sh "$PARM"
-  #/home/yzmu/bin/ftp_home_w4l.sh "$FTP_HOME_CKROPS"
   /home/yzmu/bin/hrsync_case04_case05.sh
   /home/yzmu/bin/hrsync_case05_case06.sh
   /home/yzmu/bin/storage_report.sh
+  df -h
+
+  # copy local files
+  /home/yzmu/bin/mv_home_stage.sh
+  /home/yzmu/bin/hrsync_myCloud_storage.sh
+
+  # sync local files with git repositories
+  # /home/yzmu/bin/hrsync_bin_elle.sh
+  /home/yzmu/bin/hrsync_intra_git.sh
+  /home/yzmu/bin/hrsync_sig_git.sh
+  /home/yzmu/bin/hrsync_w4l_git.sh
+
+  # generate mensagembr opengraph in DES environment
+  /usr/bin/lynx -dump http://192.168.0.18/intra/util/mensagembrtest.php > /dev/null
+  /usr/bin/lynx -dump http://192.168.0.18/intra/util/mensagembrOpenGraph.php
+
+  # deploy local files to DES environment
+  /home/yzmu/bin/hrsync_deploy_des.sh
+
+  # generate mensagembr opengraph in PRO environment
+  figlet "PRO"
+  /usr/bin/lynx -dump https://work4love.net/sig/util/mensagembrtest.php > /dev/null
+  /usr/bin/lynx -dump https://work4love.net/sig/util/mensagembrOpenGraph.php
+
+  # sync local and production files
+  /home/yzmu/bin/serina-w4l-cloud.sh
+  /home/yzmu/bin/ftp_home_w4l.sh "$FTP_HOME_CKROPS"
+  /home/yzmu/bin/dbbackup.sh
   df -h
   tail /home/yzmu/log/urltest-asesfla.log
 }
 
 pc21() {
- figlet "pc21"    
+ figlet "pc21"
   # sync local files with cloud storage
   /home/yzmu/bin/hcp_myCloud_dropbox.sh
 
@@ -72,31 +95,31 @@ pc22() {
 
   # copy local files
   #/home/yzmu/bin/mv_home_stage.sh
-  /home/yzmu/bin/hrsync_myCloud_storage.sh
+  # /home/yzmu/bin/hrsync_myCloud_storage.sh
 
   # sync local files with git repositories
-  /home/yzmu/bin/hrsync_bin_elle.sh
-  /home/yzmu/bin/hrsync_intra_git.sh
-  /home/yzmu/bin/hrsync_sig_git.sh
-  /home/yzmu/bin/hrsync_w4l_git.sh
+  # /home/yzmu/bin/hrsync_bin_elle.sh
+  # /home/yzmu/bin/hrsync_intra_git.sh
+  # /home/yzmu/bin/hrsync_sig_git.sh
+  # /home/yzmu/bin/hrsync_w4l_git.sh
 
   # generate mensagembr opengraph in DES environment
-  /usr/bin/lynx -dump http://192.168.0.22/intra/util/mensagembrtest.php > /dev/null
-  /usr/bin/lynx -dump http://192.168.0.22/intra/util/mensagembrOpenGraph.php
+  # /usr/bin/lynx -dump http://192.168.0.22/intra/util/mensagembrtest.php > /dev/null
+  # /usr/bin/lynx -dump http://192.168.0.22/intra/util/mensagembrOpenGraph.php
 
   # deploy local files to DES environment
-  /home/yzmu/bin/hrsync_deploy_des.sh
+  # /home/yzmu/bin/hrsync_deploy_des.sh
 
   # generate mensagembr opengraph in PRO environment
-  figlet "PRO"
-  /usr/bin/lynx -dump https://work4love.net/sig/util/mensagembrtest.php > /dev/null
-  /usr/bin/lynx -dump https://work4love.net/sig/util/mensagembrOpenGraph.php
+  # figlet "PRO"
+  # /usr/bin/lynx -dump https://work4love.net/sig/util/mensagembrtest.php > /dev/null
+  # /usr/bin/lynx -dump https://work4love.net/sig/util/mensagembrOpenGraph.php
 
   # sync local and production files
-  /home/yzmu/bin/serina-w4l-cloud.sh
-  /home/yzmu/bin/ftp_home_w4l.sh "$FTP_HOME_CKROPS"
-  /home/yzmu/bin/dbbackup.sh
-  df -h
+  # /home/yzmu/bin/serina-w4l-cloud.sh
+  # /home/yzmu/bin/ftp_home_w4l.sh "$FTP_HOME_CKROPS"
+  # /home/yzmu/bin/dbbackup.sh
+  # df -h
 }
 
 main() {

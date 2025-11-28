@@ -12,7 +12,8 @@
 # -------------------------------------------------------------
 # initialize variables
 PROGRAM=$1
-ORIGIN="/home/yzmu/myCloud/ckrops/sig/trance"
+PROGRAM="sftp ckropae6@w4l"
+ORIGIN="/home/yzmu/myCloud/mirror/dev/intra/trance"
 TARGET="acc"
 BACKUP="/home/yzmu/Downloads"
 # -------------------------------------------------------------
@@ -26,9 +27,9 @@ lcd $ORIGIN
 cd $TARGET
 put acc01.txt
 put acc02.txt
-ls -l 
+ls -l
 lcd $BACKUP
-get serina_news.sql
+get *.sql
 EOF
 exit 0
 echo "Script: $0 END"

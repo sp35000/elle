@@ -19,12 +19,13 @@ version="20251002: put url-marla.txt"
 msg_help="update TranceAcc and getting db*.sql"
 . /home/yzmu/etc/elle.conf
 program=$1
+program="sftp ckropae6@w4l"
 source="$intra/trance"
 target="acc"
 backup="/home/yzmu/Downloads"
 # -------------------------------------------------------------
 # verify options and define flags
-while getopts "hV" option 
+while getopts "hV" option
 do
  case $option in
   h) echo $msg_help; exit 0 ;;
@@ -45,7 +46,7 @@ put acc01.txt
 put acc02.txt
 lcd $outputDir
 put url-marla.txt
-ls -l 
+ls -l
 lcd $backup
 get *db.sql
 EOF

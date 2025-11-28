@@ -31,19 +31,18 @@ echo "Synchronizing with DES"
 figlet pi01.ck
 TARGET="/home/yzmu/pi01-pi/myCloud/mirror"
 cd $TARGET
-rsync -Crazvp $SOURCE/ $TARGET
+rsync -Crazvpl $SOURCE/ $TARGET
 
 figlet pi02.ck
 TARGET="/home/yzmu/pi02-pi/myCloud/mirror"
 cd $TARGET
-rsync -Crazvp $SOURCE/ $TARGET
+rsync -Crazvpl $SOURCE/ $TARGET
 
 figlet vs01.ck
 TARGET="/mnt/vs01-osboxes/myCloud/mirror"
 cd $TARGET
-rsync -Crazvp $SOURCE/dev   $TARGET
-rsync -Crazvp $SOURCE/ops   $TARGET
-rsync -Crazvp $SOURCE/marla $TARGET
+rsync -Crazvpl $SOURCE/dev   $TARGET
+rsync -Crazvpl $SOURCE/ops   $TARGET
+rsync -Crazvpl $SOURCE/marla $TARGET
 echo "Script: $0 END"
 echo "----------------------------------------------------------"
-
