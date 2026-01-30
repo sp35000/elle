@@ -23,7 +23,9 @@ echo "\n----------------------------------------------------------"
 echo "Script: $0 START"
 date
 truecrypt -t "$source/dino-20101002.img" "$target/t" --fs-options="umask=0002" --password="$tender" -k "" --protect-hidden=no
-truecrypt -t "$source/dino-20231120.img" "$target/t2" --fs-options="umask=0002" --password="$tender" -k "" --protect-hidden=no
+#truecrypt -t "$source/dino-20231120.img" "$target/t2-old" --fs-options="umask=0002" --password="$tender" -k "" --protect-hidden=no
+read -s -p "cargo:" cargo
+truecrypt -t "$source/cargo-20260107.img" "$target/t2" --fs-options="umask=0002" --password="$cargo" -k "" --protect-hidden=no
 truecrypt -t -l
 df -h
 date

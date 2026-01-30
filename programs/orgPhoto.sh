@@ -8,6 +8,7 @@
 # -------------------------------------------------------------
 # 20200929: initial version
 # 20230913: adjusting funcoeszz call with full path
+# 20260130: using mmv to fix names
 # -------------------------------------------------------------
 # initialize variables
 #SOURCE="/home/yzmu/case04/mirror/photo/prj/finn/05-Recife"
@@ -28,6 +29,7 @@ renameFiles() {
  echo "Prefix: $PREFIX" 
  cd $WORKFOLDER
  # fix names
+ mmv "*.jpg.1" $PREFIX"#1.jpg"
  /home/yzmu/d/cl/funcoeszz zzarrumanome $IMAGEFILES
  # rename in dropbox format
  /home/yzmu/d/cl/funcoeszz zznomefoto --dropbox $IMAGEFILES

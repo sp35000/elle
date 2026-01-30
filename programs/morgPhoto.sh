@@ -7,6 +7,7 @@
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 # 20200626: initial version
+# 20260130: cities configuration changed
 # -------------------------------------------------------------
 # initialize variables
 msg_help="help"
@@ -61,12 +62,28 @@ main() {
  echo "Script: $0 START"
  date
  # main
- city="canoa"
- callOrgPhoto
- city="manaus"
- callOrgPhoto
- city="panama"
- callOrgPhoto
+    city=canoa
+    callOrgPhoto
+    city=fortaleza
+    callOrgPhoto
+    city=jampa
+    callOrgPhoto
+    city=natal
+    callOrgPhoto
+    city=recife
+    callOrgPhoto
+    city=rj
+    callOrgPhoto
+    city=salvador
+    callOrgPhoto
+    city=sp
+    callOrgPhoto
+    city=teresina
+    callOrgPhoto
+#  city="manaus"
+#  callOrgPhoto
+#  city="panama"
+#  callOrgPhoto
 # production
  date
  echo "Script: $0 END"
