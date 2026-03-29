@@ -15,6 +15,7 @@
 # 20221013: including vc02 in deploy
 # 20221227: disable pi02 and vc02
 # 20250321: added vs01
+# 20260329: added pc22-dev
 # -------------------------------------------------------------
 # initialize variables
 SOURCE="/home/yzmu/myCloud/mirror"
@@ -27,7 +28,14 @@ date
 echo "Cleaning temporary files"
 cd $SOURCE
 find . -type f  -name "*~*" -print -exec rm {} \;
+
 echo "Synchronizing with DES"
+
+figlet des
+TARGET="/home/yzmu/pc22-dev"
+cd $TARGET
+rsync -Crazvpl $SOURCE/dev/ $TARGET
+
 figlet pi01.ck
 TARGET="/home/yzmu/pi01-pi/myCloud/mirror"
 cd $TARGET
