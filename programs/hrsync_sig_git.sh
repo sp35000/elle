@@ -10,6 +10,7 @@
 # 20210105: adapting to myCloud
 # 20220308: adapted to emma
 version="20240528: adapting to elle.conf"
+version="20260402: --no-links included"
 # -------------------------------------------------------------
 # initialize variables
 msg_help="rsync sig (Emma) and git"
@@ -36,7 +37,7 @@ find . -type f  -name "*~*" -print -exec rm {} \;
 # find . -type f  -name "*conflict*" -print -exec rm {} \;
 echo "Synchronizing with local Git repository"
 cd $git_emma
-command="rsync -Crazvp --delete-before $sig/ $git_emma"
+command="rsync -Crazvp --no-links --delete-before $sig/ $git_emma"
 $command
 echo "Script: $0 END"
 echo "----------------------------------------------------------"

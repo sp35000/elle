@@ -9,6 +9,7 @@
 version="20200702: initial version"
 version="20201222: migration from BitBucket to GitHub"
 version="20240523: adapting to elle.conf"
+version="20260402: --no-links included"
 # -------------------------------------------------------------
 # initialize variables
 source="$HOME/bin/"
@@ -20,4 +21,4 @@ target="$HOME/git/elle/programs/"
 echo -------------------------
 echo Script: $0
 echo -------------------------
-rsync --delete-before -Cravzp $source $target
+rsync --no-links --delete-before -Cravzp $source $target

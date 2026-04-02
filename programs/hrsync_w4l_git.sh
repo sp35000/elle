@@ -10,6 +10,7 @@
 # 20210105: adapting to myCloud
 # 20220308: adapted to work4love.net
 version="20240528: adapting to elle.conf"
+version="20260402: --no-links included"
 # -------------------------------------------------------------
 # -------------------------------------------------------------
 # initialize variables
@@ -36,7 +37,7 @@ cd $w4l
 find . -type f  -name "*~*" -print -exec rm {} \;
 echo "Synchronizing with local Git repository"
 cd $git_w4l
-command="rsync -Crazvp --delete-before $w4l/ $git_w4l"
+command="rsync -Crazvp --no-links --delete-before $w4l/ $git_w4l"
 $command
 echo "Script: $0 END"
 echo "----------------------------------------------------------"

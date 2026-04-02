@@ -9,6 +9,7 @@
 # 20200714: initial version
 # 20230220: template updated
 # 20230615: changed to hrsync_local_mega.sh
+version="20260402: --no-links included"
 # -------------------------------------------------------------
 # initialize variables
 msg_help="help"
@@ -32,7 +33,7 @@ main() {
  echo "Script: $0 START"
  date
  # main
- rsync -Crazvp --delete-before $LOCAL $MEGA/
+ rsync -Crazvp --no-links --delete-before $LOCAL $MEGA/
  date
  echo "Script: $0 END"
  echo "----------------------------------------------------------"

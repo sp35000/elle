@@ -7,6 +7,7 @@
 # Author    : Celso Kikuchi <sp35000@yahoo.com.br>
 # -------------------------------------------------------------
 version="20200626: initial version"
+version="20260402: --no-links included"
 # -------------------------------------------------------------
 # initialize variables
 msg_help="help"
@@ -34,7 +35,7 @@ main() {
  # find . -type f  -name "*conflict*" -print -exec rm {} \;
  echo "Synchronizing $SOURCE with $TARGET"
  cd $TARGET
- rsync -Crazvp --delete-before $SOURCE/ $TARGET
+ rsync -Crazvp --no-links --delete-before $SOURCE/ $TARGET
  date
  echo "Script: $0 END"
  echo "----------------------------------------------------------"
